@@ -9,7 +9,8 @@ git clone https://github.com/KyNgo09/OnusChainHackathon_LandingPage.git
 2. Go into project
 
 ```bash
-cd shadcn-vue-landing-page
+cd OnusChainHackathon_LandingPage
+
 ```
 
 3. Install dependencies
