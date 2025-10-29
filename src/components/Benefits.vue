@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+
 import {
-  Sparkle,
-  Tag,
-  Paintbrush,
-  Blocks,
-  LineChart,
-  Wallet,
+  Target,
+  Lightbulb,
+  Award,
+  Rocket,
 } from "lucide-vue-next";
 
 interface BenefitsProps {
@@ -18,91 +17,71 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "blocks",
-    title: "Build Brand Trust",
+    icon: "target",
+    title: "Mục tiêu",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "BlockAiThon là cuộc thi nhằm thúc đẩy sáng tạo ứng dụng blockchain, AI và tài sản số trong đời sống và kinh tế số, tìm kiếm dự án tiềm năng để Onus đồng hành và ươm tạo, đồng thời tìm kiếm nguồn nhân sự tài năng sau cọ xát thực tiễn.",
   },
   {
-    icon: "lineChart",
-    title: "More Leads",
+    icon: "lightbulb",
+    title: "Tạo sân chơi sáng tạo",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Cuộc thi được tổ chức với mục tiêu tạo ra một sân chơi công nghệ đổi mới sáng tạo ý nghĩa, nơi các nhà phát triển, sinh viên, startup và doanh nghiệp có thể cùng nhau trao đổi, thử nghiệm và hiện thực hóa những ý tưởng mang tính đột phá.",
   },
   {
-    icon: "wallet",
-    title: "Higher Conversions",
+    icon: "award",
+    title: "Cơ hội",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Không chỉ là cơ hội để khám phá và phát triển các giải pháp blockchain ứng dụng trong tài chính, tài sản số... Nhờ đó, các đội thi sẽ được tiếp cận các nguồn lực, cố vấn và có cơ hội ươm tạo để đưa sản phẩm của mình tiến gần hơn đến thị trường thực tế.",
   },
   {
-    icon: "sparkle",
-    title: "Test Marketing Ideas",
+    icon: "rocket",
+    title: "Thúc đẩy khởi nghiệp",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Bên cạnh đó, BlockAiThon còn góp phần nâng cao nhận thức về giá trị của blockchain trong đời sống hiện đại... Đây là bước đệm quan trọng giúp thế hệ nhà phát triển Việt tự tin làm chủ công nghệ, xây dựng sản phẩm “Make in Vietnam” đóng góp vào sự phát triển bền vững của nền kinh tế số quốc gia.",
   },
 ];
 
 const iconMap: Record<
   string,
-  | typeof Sparkle
-  | typeof Tag
-  | typeof Paintbrush
-  | typeof Blocks
-  | typeof LineChart
-  | typeof Wallet
+  | typeof Target
+  | typeof Lightbulb
+  | typeof Award
+  | typeof Rocket
 > = {
-  sparkle: Sparkle,
-  tag: Tag,
-  paintbrush: Paintbrush,
-  blocks: Blocks,
-  lineChart: LineChart,
-  wallet: Wallet,
+  target: Target,
+  lightbulb: Lightbulb,
+  award: Award,
+  rocket: Rocket,
 };
+
 </script>
 
 <template>
-  <section
-    id="benefits"
-    class="container py-24 sm:py-32"
-  >
-    <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
-      <div>
-        <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+  <section id="benefits" class="container py-24 sm:py-20">
+    <h2 class="text-3xl md:text-4xl text-center font-bold mb-12 py-6">
+      Giới Thiệu Sự Kiện
+    </h2>
+    <div class="grid lg:grid-cols-3 place-items-center lg:gap-12">
+      <div class="lg:col-span-1 w-full flex justify-center items-center relative p-4">
+        <div
+          class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
+        </div>
 
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Your Shortcut to Success
-        </h2>
-        <p class="text-xl text-muted-foreground mb-8">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ducimus
-          reprehenderit architecto rerum similique facere odit deleniti
-          necessitatibus quo quae.
-        </p>
+        <img src="/roboto.png" alt="Hero Image" class="relative max-w-full w-full h-auto shadow-xl" />
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-4 w-full">
-        <Card
-          v-for="({ icon, title, description }, index) in benefitList"
-          :key="title"
-          class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all delay-75 group/number"
-        >
-          <CardHeader>
-            <div class="flex justify-between">
-              <component
-                class="size-8 mb-6 text-primary"
-                :is="iconMap[icon]"
-              />
-
-              <span
-                class="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30"
-                >0{{ index + 1 }}</span
-              >
+      <div class="lg:col-span-2 grid lg:grid-cols-2 gap-4 w-full">
+        <Card v-for="({ icon, title, description },) in benefitList" :key="title"
+          class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 hover:border-primary/50">
+          <CardHeader class="flex flex-col items-center text-center p-6">
+            <div class="flex justify-center items-center">
+              <component class="size-8 mb-4 text-primary" :is="iconMap[icon]" />
             </div>
-
-            <CardTitle>{{ title }}</CardTitle>
+            <CardTitle class="text-xl font-bold">{{ title }}</CardTitle>
           </CardHeader>
 
-          <CardContent class="text-muted-foreground">
+          <CardContent class="text-muted-foreground text-center px-6 pb-6">
             {{ description }}
           </CardContent>
         </Card>
