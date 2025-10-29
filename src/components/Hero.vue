@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-vue-next";
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             Cuộc thi
             <span class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-              OnusChain Hackathon
+              BlockAiThon
             </span>
           </h1>
 
