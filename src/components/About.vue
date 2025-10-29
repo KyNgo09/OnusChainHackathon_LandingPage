@@ -62,16 +62,17 @@ const iconMap: Record<
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-12 py-6">
       Giới Thiệu Sự Kiện
     </h2>
-    <div class="grid lg:grid-cols-3 place-items-center lg:gap-12">
-      <div class="lg:col-span-1 w-full flex justify-center items-center relative p-4">
+
+    <div class="grid lg:grid-cols-3 place-items-center lg:gap-12 gap-12">
+
+      <div class="lg:col-span-1 w-full flex justify-center items-center relative p-4 order-2 lg:order-1">
         <div
           class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
         </div>
-
         <img src="/roboto.png" alt="Hero Image" class="relative max-w-full w-full h-auto" />
       </div>
 
-      <div class="lg:col-span-2 grid lg:grid-cols-2 gap-4 w-full">
+      <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full order-1 lg:order-2">
         <Card v-for="({ icon, title, description },) in benefitList" :key="title"
           class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 hover:border-primary/50">
           <CardHeader class="flex flex-col items-center text-center p-6">

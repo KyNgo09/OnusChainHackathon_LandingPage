@@ -64,7 +64,7 @@ function onLeave() {
 </script>
 
 <template>
-  <section id="bang-thi" class="container py-20 sm:py-28">
+  <section id="bang-thi" class="container py-12 sm:py-16">
     <div class="text-center mb-4 px-4 md:px-32">
       <h3 class="text-3xl md:text-4xl font-bold mb-4">CÁC BẢNG THI</h3>
       <h2 class="md:text-lg text-sm text-primary tracking-wider text-gray-400">Từ Blockchain đến AI, và sự kết hợp đầy

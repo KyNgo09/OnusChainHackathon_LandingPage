@@ -2,12 +2,12 @@
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import About from "./components/About.vue";
-import Features from "./components/Features.vue";
+import Schedule from "./components/Schedules.vue";
 import CompetitionTracks from "./components/CompetitionTracks.vue";
 import CompetitionStructure from "./components/CompetitionStructure.vue"
 import HowItWorks from "./components/HowItWorks.vue";
 // import Sponsors from "./components/Sponsors.vue";
-import Testimonials from "./components/Testimonials.vue";
+import Reward from "./components/Rewards.vue";
 import OrgPart from "./components/Organizers-Partners.vue";
 // import Pricing from "./components/Pricing.vue";
 // import Community from "./components/Community.vue";
@@ -23,13 +23,14 @@ import Footer from "./components/Footer.vue";
   <About />
   <CompetitionTracks />
   <CompetitionStructure />
-  <Features />
   <HowItWorks />
-  <Testimonials />
+  <Reward />
+  <Schedule />
   <OrgPart />
   <!-- <Community /> -->
   <!-- <Pricing /> -->
   <!-- <Contact />
   <FAQ /> -->
+  <!-- <FAQ /> -->
   <Footer />
 </template>

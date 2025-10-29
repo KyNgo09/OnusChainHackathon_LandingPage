@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useColorMode } from "@vueuse/core";
-const mode = useColorMode();
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
@@ -58,41 +56,5 @@ import { ArrowRight } from "lucide-vue-next";
 </template>
 
 <style scoped>
-.img-shadow-animation {
-  animation-name: img-shadow-animation;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-}
 
-.img-border-animation {
-  animation-name: img-border-animation;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-}
-
-@keyframes img-shadow-animation {
-  from {
-    opacity: 0.5;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes img-border-animation {
-  from {
-    @apply border-t-primary/10;
-  }
-
-  to {
-    @apply border-t-primary/60;
-  }
-}
 </style>
