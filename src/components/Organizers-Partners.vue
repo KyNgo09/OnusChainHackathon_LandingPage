@@ -48,9 +48,15 @@ const partners = [
           Đơn Vị Tổ Chức
         </h3>
         <div class="flex flex-wrap justify-around items-center gap-x-6 gap-y-8 px-4 sm:px-0">
+
           <div v-for="org in organizers" :key="org.name"
-            class="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 w-40 sm:w-48">
-            <img :src="org.src" :alt="org.name" class="h-20 lg:h-24 object-contain mb-2" />
+            class="relative group flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 w-40 sm:w-48">
+
+            <div
+              class="absolute inset-0 m-auto w-32 h-32 rounded-full bg-primary/20 dark:bg-primary/15 blur-2xl -z-10 transition-all duration-300 group-hover:opacity-75 group-hover:scale-125">
+            </div>
+
+            <img :src="org.src" :alt="org.name" class="h-16 lg:h-20 object-contain mb-2 animate-floating" />
             <p class="text-base font-medium text-muted-foreground">{{ org.name }}</p>
           </div>
         </div>
@@ -62,9 +68,15 @@ const partners = [
           Đơn Vị Đồng Hành
         </h3>
         <div class="flex flex-wrap justify-around items-center gap-x-6 gap-y-8 px-4 sm:px-0">
+
           <div v-for="partner in partners" :key="partner.name"
-            class="flex flex-col items-center text-center transition-transform duration-200 hover:scale-105 w-40 sm:w-48">
-            <img :src="partner.src" :alt="partner.name" class="h-20 lg:h-24 object-contain mb-2" />
+            class="relative group flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 w-40 sm:w-48">
+
+            <div
+              class="absolute inset-0 m-auto w-32 h-32 rounded-full bg-primary/20 dark:bg-primary/15 blur-2xl -z-10 transition-all duration-300 group-hover:opacity-75 group-hover:scale-125">
+            </div>
+
+            <img :src="partner.src" :alt="partner.name" class="h-16 lg:h-20 object-contain mb-2 animate-floating" />
             <p class="text-base font-medium text-muted-foreground">{{ partner.name }}</p>
           </div>
         </div>
@@ -75,5 +87,21 @@ const partners = [
 </template>
 
 <style scoped>
-/* Không cần style tùy chỉnh riêng, Tailwind đã xử lý */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
 </style>

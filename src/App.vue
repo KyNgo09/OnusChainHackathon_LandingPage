@@ -5,7 +5,7 @@ import About from "./components/About.vue";
 import Schedule from "./components/Schedules.vue";
 import CompetitionTracks from "./components/CompetitionTracks.vue";
 import CompetitionStructure from "./components/CompetitionStructure.vue"
-import HowItWorks from "./components/HowItWorks.vue";
+import HowItWorks from "./components/CompetitionRules.vue";
 // import Sponsors from "./components/Sponsors.vue";
 import Reward from "./components/Rewards.vue";
 import OrgPart from "./components/Organizers-Partners.vue";

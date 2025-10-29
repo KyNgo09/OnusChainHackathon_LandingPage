@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-vue-next";
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             Cuộc thi
             <span class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-              Hackathon
+              OnusChain Hackathon
             </span>
           </h1>
 
@@ -40,10 +40,12 @@ import { ArrowRight } from "lucide-vue-next";
         <!-- RIGHT COLUMN (Logo sự kiện) -->
         <div class="lg:col-span-6 flex justify-center lg:justify-center items-center">
           <div
-            class="w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner">
-            <img src="/runner.png" alt="Robot Illustration" class="w-5/6 max-w-xs rounded-xl object-contain" />
+            class="w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner relative">
+            <img src="/runner.png" alt="Robot Illustration"
+              class="w-4/5 max-w-xs rounded-xl object-contain animate-floating" />
           </div>
         </div>
+
 
         <!-- HERO DECORATION -->
         <div class="lg:col-span-12 flex justify-center mt-12 relative">
@@ -56,5 +58,21 @@ import { ArrowRight } from "lucide-vue-next";
 </template>
 
 <style scoped>
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
 
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
 </style>

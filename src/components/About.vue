@@ -69,7 +69,7 @@ const iconMap: Record<
         <div
           class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
         </div>
-        <img src="/roboto.png" alt="Hero Image" class="relative max-w-full w-full h-auto" />
+        <img src="/roboto.png" alt="Hero Image" class="relative w-4/5 max-w-xs h-auto animate-floating" />
       </div>
 
       <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full order-1 lg:order-2">
@@ -90,3 +90,23 @@ const iconMap: Record<
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
+</style>

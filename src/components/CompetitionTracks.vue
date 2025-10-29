@@ -64,12 +64,15 @@ function onLeave() {
 </script>
 
 <template>
-  <section id="bang-thi" class="container py-12 sm:py-16">
+  <section id="bang-thi" class="container py-20 sm:py-28">
     <div class="text-center mb-4 px-4 md:px-32">
-      <h3 class="text-3xl md:text-4xl font-bold mb-4">CÁC BẢNG THI</h3>
-      <h2 class="md:text-lg text-sm text-primary tracking-wider text-gray-400">Từ Blockchain đến AI, và sự kết hợp đầy
-        tiềm năng giữa cả hai –
-        đây là nơi những ý tưởng táo bạo được ươm mầm, để công nghệ trở thành động lực thay đổi thế giới số.</h2>
+      <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+        CÁC BẢNG THI
+      </h2>
+      <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-10">
+        Từ Blockchain đến AI, và sự kết hợp đầy tiềm năng giữa cả hai –
+        đây là nơi những ý tưởng táo bạo được ươm mầm, để công nghệ trở thành động lực thay đổi thế giới số.
+      </h3>
     </div>
 
     <Carousel @init-api="onInit" :opts="{ align: 'center' }" class="relative max-w-6xl mx-auto">
