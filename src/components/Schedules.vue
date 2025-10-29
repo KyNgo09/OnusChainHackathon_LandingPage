@@ -13,7 +13,7 @@ const timelineRounds = [
       "07/11 - 12/11/2025: Mở đơn đăng ký các bảng thi",
       "07/11 – 15/12/2025: Nộp hồ sơ dự thi",
       "03/01/2026: Thông báo kết quả Top 50 mỗi bảng",
-      "04/01 - 08/01/2026: Pitching Top 50 & Công bố Top 30 mỗi bảng",
+      "04/01 - 08/01/2026: Pitching Top 50 mỗi bảng & Công bố Top 30 mỗi bảng",
     ],
   },
   {
@@ -24,7 +24,7 @@ const timelineRounds = [
     milestones: [
       "07/01/2026: Gặp mặt Top 30 mỗi bảng",
       "07/01 - 16/01/2026: Chuỗi khóa học đào tạo trực tuyến",
-      "17/01 - 19/01/2026: Pitching Top 30 & chọn ra Top 15 mỗi bảng",
+      "17/01 - 19/01/2026: Pitching Top 30 mỗi bảng & chọn ra Top 15 mỗi bảng",
       "20/01 - 06/02/2026: Mentoring cho các đội thi",
     ],
   },
@@ -34,8 +34,8 @@ const timelineRounds = [
     iconColor: "text-yellow-400",
     border: "border-yellow-400",
     milestones: [
-      "06/02 - 07/02/2026: Pitching Top 15 & Chọn ra Top 10 chung kết tổng",
-      "10/02/2026: Chung kết (TP. Đà Nẵng, Việt Nam) (offline + livestream) & Trao giải.",
+      "06/02 - 07/02/2026: Pitching Top 15 mỗi bảng & Chọn ra Top 10 chung kết tổng",
+      "10/02/2026: Chung kết (TP. Đà Nẵng, Việt Nam) (offline + livestream) Chọn ra Quán quân, Á quân và Quý quân cùng các giải thưởng khác",
     ],
   },
 ];

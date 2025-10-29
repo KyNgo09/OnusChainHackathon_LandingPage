@@ -13,22 +13,22 @@ const awards = [
     iconColor: "text-gray-400",
     iconLabel: "Silver Medal",
     benefits: [
-      "Bằng khen",
-      "Gói mentoring xây dựng sản phẩm"
+      "Gói Mentoring và cố vấn (trị giá 30.000.000 VND)",
+      "Gói Launchpad Onuschain (trị giá 50.000.000 VND)"
     ],
   },
   {
     title: "QUÁN QUÂN",
-    prize: "50.000.000 VNĐ",
+    prize: " 50.000.000 VNĐ",
     description: "Hiện kim cùng các gói giải thưởng giá trị!",
     highlight: true,
     icon: Trophy,
     iconColor: "text-yellow-400",
     iconLabel: "Trophy",
     benefits: [
-      "Bằng khen",
-      "Gói hỗ trợ phát triển dự án",
-      "Cúp quán quân vinh danh"
+      "Gói truyền thông - PR (trị giá 20.000.000 VND)",
+      "Gói Mentoring và cố vấn (trị giá 30.000.000 VND)",
+      "Gói Launchpad Onuschain (trị giá 50.000.000 VND)"
     ],
   },
   {
@@ -40,8 +40,8 @@ const awards = [
     iconColor: "text-amber-800",
     iconLabel: "Bronze Medal",
     benefits: [
-      "Bằng khen",
-      "Gói hỗ trợ truyền thông"
+      "Gói hỗ trợ kỹ thuật/văn phòng (trị giá 5.000.000 VND)",
+      "Gói Launchpad Onuschain (trị giá 50.000.000 VND)"
     ],
   },
 ];
@@ -104,10 +104,7 @@ const awards = [
         <CardContent class="flex flex-col items-center">
           <div class="space-y-2 mt-2 w-full">
             <span class="block text-base text-muted-foreground text-center">
-              Bằng khen
-            </span>
-            <span class="block text-base text-muted-foreground text-center">
-              Phần quà khích lệ
+              Gói mentoring kỹ thuật/ hỗ trợ demo sản phẩm/ hỗ trợ truyền thông Startup (trị giá 3.000.000 VND)
             </span>
           </div>
         </CardContent>

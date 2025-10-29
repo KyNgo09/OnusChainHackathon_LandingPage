@@ -32,13 +32,13 @@ const benefitList: BenefitsProps[] = [
     icon: "award",
     title: "Cơ hội",
     description:
-      "Không chỉ là cơ hội để khám phá và phát triển các giải pháp blockchain ứng dụng trong tài chính, tài sản số... Nhờ đó, các đội thi sẽ được tiếp cận các nguồn lực, cố vấn và có cơ hội ươm tạo để đưa sản phẩm của mình tiến gần hơn đến thị trường thực tế.",
+      "Không chỉ là cơ hội để khám phá và phát triển các giải pháp blockchain ứng dụng trong tài chính, tài sản số, mà cuộc thi này còn đóng vai trò là sân chơi, cầu nối giữa những người trẻ đam mê công nghệ với doanh nghiệp, chuyên gia và nhà đầu tư trong hệ sinh thái blockchain tại Việt Nam. Nhờ đó, các đội thi sẽ được tiếp cận các nguồn lực, cố vấn và có cơ hội ươm tạo để đưa sản phẩm của mình tiến gần hơn đến thị trường thực tế.",
   },
   {
     icon: "rocket",
     title: "Thúc đẩy khởi nghiệp",
     description:
-      "Bên cạnh đó, BlockAiThon còn góp phần nâng cao nhận thức về giá trị của blockchain trong đời sống hiện đại... Đây là bước đệm quan trọng giúp thế hệ nhà phát triển Việt tự tin làm chủ công nghệ, xây dựng sản phẩm “Make in Vietnam” đóng góp vào sự phát triển bền vững của nền kinh tế số quốc gia.",
+      "Bên cạnh đó, BlockAiThon còn góp phần nâng cao nhận thức về giá trị của blockchain trong đời sống hiện đại, thúc đẩy kỹ năng đổi mới sáng tạo và tinh thần khởi nghiệp trong cộng đồng trẻ Việt Nam. Đây là bước đệm quan trọng giúp thế hệ nhà phát triển Việt tự tin làm chủ công nghệ, xây dựng sản phẩm “Make in Vietnam” đóng góp vào sự phát triển bền vững của nền kinh tế số quốc gia.",
   },
 ];
 
