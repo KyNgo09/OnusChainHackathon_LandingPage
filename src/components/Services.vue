@@ -1,88 +1,123 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardDescription,
+  CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
-import { Badge } from "@/components/ui/badge";
-
-enum ProService {
-  YES = 1,
-  NO = 0,
-}
-
-interface ServiceProps {
-  title: string;
-  pro: ProService;
-  description: string;
-}
-
-const serviceList: ServiceProps[] = [
+const tracks = [
   {
-    title: "Custom Domain Integration",
+    id: 0,
+    title: "BẢNG 1",
+    name: "BLOCKCHAIN HACKATHON",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
-    pro: 0,
+      "Tập trung vào công nghệ blockchain, tokenomics, smart contract, DeFi, NFT, SocialFi, GameFi,...",
   },
   {
-    title: "Social Media Integrations",
+    id: 1,
+    title: "BẢNG 2",
+    name: "AI HACKATHON",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
-    pro: 0,
+      "Dành cho những ý tưởng sử dụng trí tuệ nhân tạo để giải quyết bài toán thực tế trong tài chính, kinh tế số, tài sản số. Tập trung vào ứng dụng AI/ML, NLP, GenAI, và AI ethics.",
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
-    pro: 0,
-  },
-  {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
-    pro: 1,
+    id: 2,
+    title: "BẢNG 3",
+    name: "BLOCKCHAIN & AI HACKATHON",
+    description:
+      "Bảng thi đặc biệt dành cho những đội tiên phong kết hợp sức mạnh của Blockchain và AI, tạo ra các giải pháp xác thực dữ liệu, tự động hóa giao dịch, bảo mật và minh bạch hóa mô hình AI.",
   },
 ];
+
+const selectedIndex = ref<number | null>(null);
+const hoverIndex = ref<number | null>(null);
+const emblaApi = ref<any | null>(null);
+
+function onInit(api: any) {
+  emblaApi.value = api;
+}
+
+function goTo(index: number) {
+  if (selectedIndex.value === index) {
+    selectedIndex.value = null;
+    hoverIndex.value = null;
+    if (emblaApi.value?.scrollTo) emblaApi.value.scrollTo(0);
+    return;
+  }
+
+  selectedIndex.value = index;
+  hoverIndex.value = null;
+  if (emblaApi.value?.scrollTo) emblaApi.value.scrollTo(index);
+}
+
+function onHover(i: number) {
+  if (selectedIndex.value === null) hoverIndex.value = i;
+}
+
+function onLeave() {
+  if (selectedIndex.value === null) hoverIndex.value = null;
+}
 </script>
 
 <template>
-  <section
-    id="services"
-    class="container py-24 sm:py-32"
-  >
-    <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Services
-    </h2>
+  <section id="bang-thi" class="container py-20 sm:py-28">
+    <div class="text-center mb-4 px-36">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4">CÁC BẢNG THI</h3>
+      <h2 class="text-lg text-primary tracking-wider text-gray-400">Từ Blockchain đến AI, và sự kết hợp đầy tiềm năng giữa cả hai –
+        đây là nơi những ý tưởng táo bạo được ươm mầm, để công nghệ trở thành động lực thay đổi thế giới số.</h2>
+    </div>
 
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Grow Your Business
-    </h2>
-    <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      From marketing and sales to operations and strategy, we have the expertise
-      to help you achieve your goals.
-    </h3>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    <Carousel @init-api="onInit" :opts="{ align: 'center' }" class="relative max-w-6xl mx-auto">
+      <CarouselContent class="gap-4 py-6 px-14">
+        <CarouselItem v-for="(track, i) in tracks" :key="track.id" class="basis-auto pl-0">
+          <Card @mouseenter="onHover(i)" @mouseleave="onLeave()" :class="[
+            'transition-all duration-300 ease-in-out mx-3 sm:mx-2',
+            'w-64 sm:w-72 md:w-80 h-92 sm:h-80 md:h-80',
+            selectedIndex !== null
+              ? (i === selectedIndex
+                ? 'scale-100 ring-2 ring-primary-500 shadow-lg dark:shadow-black/50 opacity-100 filter-none'
+                : 'opacity-40 scale-95 filter blur-sm')
+              : (hoverIndex === i
+                ? 'scale-100 ring-2 ring-primary-500 shadow-lg opacity-100 filter-none'
+                : 'opacity-100 scale-100 filter-none'),
+            'bg-card'
+          ]">
+            <CardHeader class="pb-0">
+              <div class="flex flex-col gap-2 p-4">
+                <CardTitle class="text-sm md:text-lg">
+                  {{ track.title }}
+                  <br />
+                  <span
+                    class="text-transparent text-2xl font-bold bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                    {{ track.name }}
+                  </span>
+                </CardTitle>
+              </div>
+            </CardHeader>
 
-    <div
-      class="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full lg:w-[60%] mx-auto"
-    >
-      <div
-        v-for="{ title, description, pro } in serviceList"
-        :key="title"
-      >
-        <Card class="bg-muted/60 dark:bg-card h-full relative">
-          <CardHeader>
-            <CardTitle>{{ title }}</CardTitle>
-            <CardDescription>{{ description }}</CardDescription>
-          </CardHeader>
-          <Badge
-            v-if="pro === ProService.YES"
-            variant="secondary"
-            class="absolute -top-2 -right-3"
-            >PRO</Badge
-          >
-        </Card>
-      </div>
+            <CardContent class="p-10 pt-0 flex items-center justify-center text-justify">
+              <p class="text-sm text-muted-foreground">
+                {{ track.description }}
+              </p>
+            </CardContent>
+          </Card>
+        </CarouselItem>
+      </CarouselContent>
+    </Carousel>
+
+    <!-- controls -->
+    <div class="mt-2 flex justify-center items-center gap-3">
+      <Button v-for="(t, idx) in tracks" :key="t.id" variant="ghost" size="sm"
+        class="h-10 w-10 rounded-full p-0 flex items-center justify-center" :class="idx === selectedIndex
+          ? 'bg-gradient-to-r from-[#D247BF] to-primary text-white shadow-md'
+          : 'text-muted-foreground hover:ring-1 hover:ring-primary/30'" @click="goTo(idx)"
+        :aria-pressed="idx === selectedIndex">
+        {{ idx + 1 }}
+      </Button>
     </div>
   </section>
 </template>

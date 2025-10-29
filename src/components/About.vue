@@ -68,7 +68,7 @@ const iconMap: Record<
           class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
         </div>
 
-        <img src="/roboto.png" alt="Hero Image" class="relative max-w-full w-full h-auto shadow-xl" />
+        <img src="/roboto.png" alt="Hero Image" class="relative max-w-full w-full h-auto" />
       </div>
 
       <div class="lg:col-span-2 grid lg:grid-cols-2 gap-4 w-full">
