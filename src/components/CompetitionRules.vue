@@ -6,34 +6,35 @@ const tabs = ['QUYỀN LỢI & TRÁCH NHIỆM ĐỘI THI', 'CÁC HÌNH THỨC K�
 const active = ref(0)
 
 const benefits = [
-  'Trong quá trình tham gia cuộc thi, đội thi KHÔNG có quyền thay đổi cơ cấu thành viên đội thi.',
-  'Đội thi có quyền thông báo tới Ban Tổ chức...',
-  'Đội thi phải có trên 50% thành viên tham gia...',
-  'Các đội thi cần phải tuân thủ nội quy và thời gian nộp tài liệu...',
-  'Đội thi và thành viên đội thi cần cam đoan mọi thông tin...',
-  'Đội thi không được phép gian lận, vi phạm đạo đức, pháp luật...',
-  'Đội thi hoàn toàn tự chịu trách nhiệm về vấn đề bản quyền...',
-  'Trong suốt thời gian tham gia dự thi, các buổi gặp mặt, kết nối với cố vấn...'
-]
+  'Không được thay đổi thành viên đội thi trong suốt quá trình tham gia.',
+  'Đội thi có quyền phản hồi và khiếu nại qua email chính thức của Ban Tổ chức.',
+  'Ít nhất 50% thành viên phải tham gia các hoạt động do Ban Tổ chức tổ chức.',
+  'Đội thi phải tuân thủ nội quy, thời hạn nộp hồ sơ và hướng dẫn tham gia sự kiện trực tuyến.',
+  'Mọi thông tin nộp cho Ban Tổ chức phải trung thực, sai lệch sẽ bị xử lý trách nhiệm.',
+  'Nghiêm cấm gian lận, vi phạm đạo đức, pháp luật hoặc xúc phạm cuộc thi và các bên liên quan.',
+  'Đội thi tự chịu trách nhiệm về bản quyền và bảo mật hồ sơ dự thi cùng tài liệu từ Ban Tổ chức.',
+  'Mọi buổi kết nối với cố vấn, nhà tài trợ, nhà đầu tư phải được hẹn trước và báo cho Ban Tổ chức ít nhất 24 giờ.'
+];
 
 const sanctions = [
   {
     title: 'Nhắc nhở',
-    detail: 'Áp dụng với các lỗi nhẹ hoặc lần đầu vi phạm; yêu cầu sửa chữa hành vi.'
+    detail: 'Áp dụng với lỗi nhẹ, lần đầu vi phạm, chưa ảnh hưởng nghiêm trọng đến cuộc thi. Ban Tổ chức sẽ gửi thông báo và yêu cầu khắc phục ngay.'
   },
   {
     title: 'Cảnh cáo',
-    detail: 'Dành cho vi phạm có mức độ hoặc tái phạm; thông báo chính thức từ BTC.'
+    detail: 'Áp dụng với lỗi tái phạm hoặc vi phạm có mức độ, ảnh hưởng đến hình ảnh cuộc thi. Cảnh cáo được công bố nội bộ.'
   },
   {
     title: 'Trừ điểm',
-    detail: 'Áp dụng cho vi phạm trong nộp hồ sơ hoặc không tuân thủ quy định thi; ảnh hưởng tới kết quả chấm.'
+    detail: 'Áp dụng khi vi phạm trong nộp hồ sơ, thuyết trình hoặc triển khai dự án. Mức trừ điểm do Ban Tổ chức quyết định theo mức độ vi phạm.'
   },
   {
     title: 'Loại khỏi cuộc thi',
-    detail: 'Dành cho hành vi gian lận nghiêm trọng hoặc vi phạm pháp luật.'
+    detail: 'Áp dụng với vi phạm nghiêm trọng như sao chép ý tưởng, gian lận, cung cấp thông tin sai, vi phạm đạo đức/pháp luật hoặc gây mất an toàn. Quyết định loại trừ có thể được công bố rộng rãi.'
   }
-]
+];
+
 </script>
 
 <template>
@@ -75,7 +76,7 @@ const sanctions = [
             ]">
               <div>
                 <ul
-                  class="list-disc pl-5 space-y-3 text-base md:text-sm leading-relaxed text-foreground marker:text-primary">
+                  class="list-disc pl-5 space-y-3 text-base text-justify md:text-sm leading-relaxed text-foreground marker:text-primary">
                   <li v-for="(item, idx) in benefits" :key="idx">{{ item }}</li>
                 </ul>
               </div>
@@ -100,7 +101,7 @@ const sanctions = [
               'bg-background/5 dark:bg-background/10 p-4 rounded-lg'
             ]">
               <div>
-                <ul class="space-y-4">
+                <ul class="space-y-4 text-justify">
                   <li v-for="(item, idx) in sanctions" :key="idx" class="flex items-start gap-4">
                     <div class="flex-none mt-1">
                       <span
