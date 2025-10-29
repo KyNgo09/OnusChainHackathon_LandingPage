@@ -34,14 +34,14 @@ import { Mail, Phone, Facebook, Globe } from "lucide-vue-next";
 
           <!-- Email -->
           <a href="mailto:hubnetworkdn@gmail.com" class="opacity-60 hover:opacity-100 items-center flex gap-2">
-            <Mail class="size-4" />
+            <Mail class="size-4 text-primary" />
             <!-- Bỏ chữ "Email:" thừa, dùng icon là đủ -->
             <span>hubnetworkdn@gmail.com</span>
           </a>
 
           <!-- Phone -->
           <a href="tel:0911871573" class="opacity-60 hover:opacity-100 items-center flex gap-2">
-            <Phone class="size-4" />
+            <Phone class="size-4 text-primary" />
             <span>0911.871.573 (Ms. Van)</span>
           </a>
         </div>
@@ -52,14 +52,14 @@ import { Mail, Phone, Facebook, Globe } from "lucide-vue-next";
 
           <!-- Facebook -->
           <a href="#" target="_blank" class="opacity-60 hover:opacity-100 items-center flex gap-2">
-            <Facebook class="size-4" />
+            <Facebook class="size-4 text-primary" />
             <span>BlockAiThon Fanpage</span>
           </a>
 
           <!-- Website -->
           <a href="https://www.blockaithon.com" target="_blank"
             class="opacity-60 hover:opacity-100 items-center flex gap-2">
-            <Globe class="size-4" />
+            <Globe class="size-4 text-primary" />
             <span>www.blockaithon.com</span>
           </a>
         </div>
@@ -69,7 +69,7 @@ import { Mail, Phone, Facebook, Globe } from "lucide-vue-next";
       <!-- Phần Copyright giữ nguyên -->
       <Separator class="my-4" />
       <section class="text-center">
-        <h3 class="text-sm opacity-60">
+        <h3 class="text-sm opacity-60 text-primary">
           &copy; 2025 BlockAiThon. All rights reserved.
         </h3>
       </section>

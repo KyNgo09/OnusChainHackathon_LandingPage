@@ -38,9 +38,14 @@ import { ArrowRight } from "lucide-vue-next";
         </div>
 
         <!-- RIGHT COLUMN (Logo sự kiện) -->
-        <div class="lg:col-span-6 flex justify-center lg:justify-center items-center">
+        <div class="lg:col-span-6 flex justify-center lg:justify-center items-center relative ">
           <div
-            class="w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner relative">
+            class="absolute inset-0 m-auto w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-primary/10 dark:bg-primary/5 blur-xl -z-10">
+          </div>
+
+
+          <div
+            class="w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner relative z-10">
             <img src="/runner.png" alt="Robot Illustration"
               class="w-4/5 max-w-xs rounded-xl object-contain animate-floating" />
           </div>
@@ -58,13 +63,14 @@ import { ArrowRight } from "lucide-vue-next";
 </template>
 
 <style scoped>
+/* Thêm lại keyframes và class cho hiệu ứng pulse-slow nếu chưa có */
 @keyframes floating {
   0% {
     transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 
   100% {

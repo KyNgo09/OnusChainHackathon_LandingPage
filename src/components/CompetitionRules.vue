@@ -83,7 +83,7 @@ const sanctions = [
 
             <div class="flex-shrink-0">
               <img :src="`roboto.png`" :alt="`Image describing benefits `"
-                className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 " />
+                className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 animate-floating" />
             </div>
             <div
               class="z-100 absolute right-20 w-44 h-72  lg:w-64 lg:h-80 rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl">
@@ -91,8 +91,9 @@ const sanctions = [
           </div>
           <div class="flex flex-col md:flex-row items-center gap-2 relative" v-else>
             <div class="flex-shrink-0">
-              <img :src="`runner.png`" alt="Hình minh họa hình thức kỷ luật"
-                class="w-[150px] md:w-[250px] lg:w-[300px] mx-auto -scale-x-100" />
+              <<img :src="`runner.png`" alt="Hình minh họa hình thức kỷ luật"
+                class="w-[120px] md:w-[220px] lg:w-[280px] mx-auto -scale-x-100 animate-floating" />
+
             </div>
             <div :class="[
               'flex-1',
@@ -124,3 +125,22 @@ const sanctions = [
     </div>
   </section>
 </template>
+<style scoped>
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
+</style>
