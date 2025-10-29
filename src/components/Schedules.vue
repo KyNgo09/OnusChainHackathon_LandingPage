@@ -81,9 +81,17 @@ const timelineRounds = [
         <div v-if="index < timelineRounds.length - 1"
           class="flex-shrink-0 flex lg:flex-col items-center justify-center">
 
-          <div class="lg:hidden h-12 w-1 border-l-2 border-primary/30  my-4"></div>
+          <div class="lg:hidden flex flex-col items-center justify-center my-4">
+            <div class="w-0.5 h-5 bg-primary/50"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-primary my-1"></div>
+            <div class="w-0.5 h-5 bg-primary/50"></div>
+          </div>
 
-          <div class="hidden lg:block w-12 h-1 border-b-2 border-primary/30  mx-4"></div>
+          <div class="hidden lg:flex items-center justify-center mx-4">
+            <div class="h-0.5 w-5 bg-primary/50"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-primary mx-1"></div>
+            <div class="h-0.5 w-5 bg-primary/50"></div>
+          </div>
         </div>
       </template>
     </div>

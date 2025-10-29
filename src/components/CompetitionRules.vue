@@ -91,7 +91,7 @@ const sanctions = [
           </div>
           <div class="flex flex-col md:flex-row items-center gap-2 relative" v-else>
             <div class="flex-shrink-0">
-              <<img :src="`runner.png`" alt="Hình minh họa hình thức kỷ luật"
+              <img :src="`runner.png`" alt="Hình minh họa hình thức kỷ luật"
                 class="w-[120px] md:w-[220px] lg:w-[280px] mx-auto -scale-x-100 animate-floating" />
 
             </div>

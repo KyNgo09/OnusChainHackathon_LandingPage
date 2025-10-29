@@ -75,7 +75,7 @@ const sections: Section[] = [
 </script>
 
 <template>
-    <section id="services" class="container py-24 sm:py-32 relative">
+    <section id="co-cau" class="container py-12 sm:py-16 relative">
         <!-- background blobs -->
         <div
             class="pointer-events-none absolute -z-10 left-[-10%] top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
