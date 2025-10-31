@@ -21,12 +21,12 @@ import Footer from "./components/Footer.vue";
   <Hero />
   <!-- <Sponsors /> -->
   <About />
-  <CompetitionTracks />
+  <OrgPart />
   <CompetitionStructure />
+  <CompetitionTracks />
   <HowItWorks />
   <Reward />
   <Schedule />
-  <OrgPart />
   <!-- <Community /> -->
   <!-- <Pricing /> -->
   <!-- <Contact />
