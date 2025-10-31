@@ -1,13 +1,7 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-
-import {
-  Target,
-  Lightbulb,
-  Award,
-  Rocket,
-} from "lucide-vue-next";
+import { Target, Lightbulb, Award, Rocket } from "lucide-vue-next";
 
 interface BenefitsProps {
   icon: string;
@@ -44,45 +38,66 @@ const benefitList: BenefitsProps[] = [
 
 const iconMap: Record<
   string,
-  | typeof Target
-  | typeof Lightbulb
-  | typeof Award
-  | typeof Rocket
+  typeof Target | typeof Lightbulb | typeof Award | typeof Rocket
 > = {
   target: Target,
   lightbulb: Lightbulb,
   award: Award,
   rocket: Rocket,
 };
-
 </script>
 
 <template>
   <section id="gioi-thieu" class="container py-24 sm:py-20">
-    <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-12 py-6">
-      Giới Thiệu Sự Kiện
-    </h2>
+    <!-- SECTION HEADER -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-4">
+        Đơn Vị Tổ Chức & Đồng Hành
+      </h2>
+      <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
+    </div>
 
+    <!-- GRID -->
     <div class="grid lg:grid-cols-3 place-items-center lg:gap-12 gap-12">
-
+      <!-- LEFT ILLUSTRATION -->
       <div class="lg:col-span-1 w-full flex justify-center items-center relative p-4 order-2 lg:order-1">
+        <!-- glow -->
         <div
           class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
         </div>
+
         <img src="/roboto.png" alt="Hero Image" class="relative w-4/5 max-w-xs h-auto animate-floating" />
       </div>
 
+      <!-- RIGHT CARDS -->
       <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full order-1 lg:order-2">
-        <Card v-for="({ icon, title, description },) in benefitList" :key="title"
+        <Card v-for="{ icon, title, description } in benefitList" :key="title"
           class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/30 hover:border-primary/50">
-          <CardHeader class="flex flex-col items-center text-center p-6">
-            <div class="flex justify-center items-center">
-              <component class="size-8 mb-4 text-primary" :is="iconMap[icon]" />
+          <!-- HEADER (căn giống CompetitionTracks) -->
+          <CardHeader class="p-6 pb-3">
+            <div class="flex items-start justify-between">
+              <!-- TEXT BLOCK -->
+              <div class="flex flex-col gap-1">
+                <!-- Dòng tiêu đề chính -->
+                <CardTitle class="text-base md:text-lg font-bold text-primary leading-tight">
+                  <!-- Vì bên CompetitionTracks có 2 dòng (số + tên),
+                       ở đây ta chỉ có 1 dòng nên ta dùng gradient cho chính tên -->
+                  <span
+                    class="block text-transparent text-lg md:text-xl font-bold bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                    {{ title }}
+                  </span>
+                </CardTitle>
+              </div>
+
+              <!-- ICON BÊN PHẢI -->
+              <div class="-mr-2 -mt-2 shrink-0">
+                <component :is="iconMap[icon]" class="size-8 md:size-9 text-primary" />
+              </div>
             </div>
-            <CardTitle class="text-xl font-bold">{{ title }}</CardTitle>
           </CardHeader>
 
-          <CardContent class="text-muted-foreground text-sm md:text-[16px] text-center px-6 pb-6">
+          <!-- CONTENT -->
+          <CardContent class="text-muted-foreground text-sm md:text-[16px] px-6 pt-0 pb-6 text-justify">
             {{ description }}
           </CardContent>
         </Card>

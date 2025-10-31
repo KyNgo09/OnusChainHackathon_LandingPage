@@ -38,8 +38,8 @@ const routeList: RouteProps[] = [
   { href: "#gioi-thieu", label: "Giới Thiệu" },
   {
     href: "#cuoc-thi", label: "Cuộc Thi", subItems: [
-      { href: "#bang-thi", label: "Bảng Thi" },
       { href: "#co-cau", label: "Cơ Cấu" },
+      { href: "#bang-thi", label: "Bảng Thi" },
       { href: "#quy-che", label: "Quy Chế" },
     ]
   },

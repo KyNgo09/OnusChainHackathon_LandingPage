@@ -59,7 +59,7 @@ const partners = [
         <a v-for="org in organizers" :key="org.name" :href="org.href" target="_blank" rel="noopener noreferrer"
           class="group relative block h-full">
           <div
-            class="relative bg-white rounded-xl p-6 h-full flex flex-col items-center justify-between transition-all duration-300 border shadow-lg shadow-primary/30 border-gray-100 hover:scale-105 hover:shadow-xl hover:shadow-primary/30">
+            class="relative bg-white rounded-xl p-6 h-full flex flex-col items-center justify-between transition-all duration-300 border border-gray-100 shadow-md hover:shadow-xl hover:shadow-primary/30 hover:ring-2 hover:ring-primary">
             <div class="h-28 flex items-center justify-center mb-4">
               <img :src="org.src" :alt="org.name"
                 class="h-20 object-contain transition-transform duration-300 group-hover:scale-105" />
@@ -88,7 +88,7 @@ const partners = [
         <a v-for="partner in partners" :key="partner.name" :href="partner.href" target="_blank"
           rel="noopener noreferrer" class="group relative block h-full">
           <div
-            class="relative bg-white rounded-xl p-6 h-full flex flex-col items-center justify-between transition-all duration-300 border shadow-lg shadow-primary/30 border-gray-100 hover:scale-105 hover:shadow-xl hover:shadow-primary/30">
+            class="relative bg-white rounded-xl p-6 h-full flex flex-col items-center justify-between transition-all duration-300 border shadow-md border-gray-100 hover:shadow-xl hover:shadow-primary/30 ">
             <div class="h-28 flex items-center justify-center mb-4">
               <img :src="partner.src" :alt="partner.name"
                 class="h-20 object-contain transition-transform duration-300 group-hover:scale-105" />
