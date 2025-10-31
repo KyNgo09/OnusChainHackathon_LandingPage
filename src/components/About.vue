@@ -59,7 +59,7 @@ const iconMap: Record<
 
 <template>
   <section id="gioi-thieu" class="container py-24 sm:py-20">
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-12 py-6">
+    <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-12 py-6">
       Giới Thiệu Sự Kiện
     </h2>
 

@@ -45,7 +45,7 @@ import { ArrowRight } from "lucide-vue-next";
 
 
           <div
-            class="w-[22rem] h-[22rem] sm:w-[26rem] sm:h-[26rem] md:w-[32rem] md:h-[32rem] rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner relative z-10">
+            class="w-[22rem] h-[22rem] sm:w-[26rem] sm:h-[26rem] md:w-[32rem] md:h-[32rem] bg-gradient-to-tr flex items-center justify-center relative z-10">
             <img src="/Logo-BlockAIThon.png" alt="Logo BlockAiThon"
               class="w-full h-full max-w-none max-h-none rounded-xl object-contain animate-floating" />
           </div>

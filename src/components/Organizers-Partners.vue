@@ -1,107 +1,105 @@
 <script setup lang="ts">
-// --- QUAN TRỌNG: Hãy cập nhật tên tệp logo của bạn ở đây ---
-// Đảm bảo đường dẫn '@' đang trỏ đúng đến thư mục 'src' của bạn
-import logoDanang from '@/assets/logo_danang.png'; // <-- Thay tên tệp này
-import logoRise from '@/assets/logo_ryf.png';   // <-- Thay tên tệp này
-import logoHub from '@/assets/logo_hub.png';       // <-- Thay tên tệp này
-import logoOnuschain from '@/assets/logo_onus.png'; // <-- Thay tên tệp này
-import logoFundgo from '@/assets/logo_fundgo.png';         // <-- Thay tên tệp này
+// Import logo (giữ nguyên)
+import logoDanang from '@/assets/logo_danang.png';
+import logoRise from '@/assets/logo_ryf.png';
+import logoHub from '@/assets/logo_hub.png';
+import logoOnuschain from '@/assets/logo_onus.png';
+import logoFundgo from '@/assets/logo_fundgo.png';
 
-// Tạo mảng dữ liệu cho logo để dễ dàng quản lý
+// Tách lại 2 mảng (giữ nguyên)
 const organizers = [
   {
     name: "Trung tâm hỗ trợ Khởi nghiệp ĐMST TP. Đà Nẵng",
-    src: logoDanang
+    src: logoDanang,
+    href: "#",
   },
   {
     name: "Rise Your Future",
-    src: logoRise
+    src: logoRise,
+    href: "#",
   },
   {
     name: "HUB Network",
-    src: logoHub
+    src: logoHub,
+    href: "#",
   },
 ];
 
 const partners = [
   {
     name: "Onuschain",
-    src: logoOnuschain
+    src: logoOnuschain,
+    href: "#",
   },
   {
     name: "Fundgo Capital",
-    src: logoFundgo
+    src: logoFundgo,
+    href: "#",
   },
 ];
 </script>
 
 <template>
-  <section id="partners" class="container py-12 sm:py-16">
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-12">
-      Đơn Vị Tổ Chức & Đơn Vị Đồng Hành
-    </h2>
+  <section id="partners" class="container min-h-screen flex flex-col justify-center py-12 sm:py-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-4">
+        Đơn Vị Tổ Chức & Đồng Hành
+      </h2>
+      <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
+    </div>
 
-    <div class="flex flex-col items-center gap-12">
-
-      <div class="w-full">
-        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-8">
+    <div class="mb-16">
+      <div class="text-center mb-10">
+        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-4">
           Đơn Vị Tổ Chức
         </h3>
-        <div class="flex flex-wrap justify-around items-center gap-x-6 gap-y-8 px-4 sm:px-0">
-
-          <div v-for="org in organizers" :key="org.name"
-            class="relative group flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 w-40 sm:w-48">
-
-            <div
-              class="absolute inset-0 m-auto w-32 h-32 rounded-full bg-primary/20 dark:bg-primary/15 blur-2xl -z-10 transition-all duration-300 group-hover:opacity-75 group-hover:scale-125">
-            </div>
-
-            <img :src="org.src" :alt="org.name" class="h-16 lg:h-20 object-contain mb-2 animate-floating" />
-            <p class="text-base font-medium text-muted-foreground">{{ org.name }}</p>
-          </div>
-        </div>
       </div>
 
-      <hr class="w-full max-w-lg border-t-2 border-primary/20" />
-      <div class="w-full">
-        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <a v-for="org in organizers" :key="org.name" :href="org.href" target="_blank" rel="noopener noreferrer"
+          class="group relative block h-full">
+          <div
+            class="relative bg-white rounded-xl p-6 h-full flex flex-col items-center justify-between transition-all duration-300 border shadow-lg shadow-primary/30 border-gray-100 hover:scale-105 hover:shadow-xl hover:shadow-primary/30">
+            <div class="h-28 flex items-center justify-center mb-4">
+              <img :src="org.src" :alt="org.name"
+                class="h-20 object-contain transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <p class="text-base font-medium text-center text-gray-700">
+              {{ org.name }}
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center mb-16">
+      <div class="w-full max-w-lg border-t-2 border-primary/20"></div>
+    </div>
+
+    <div>
+      <div class="text-center mb-10">
+        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-4">
           Đơn Vị Đồng Hành
         </h3>
-        <div class="flex flex-wrap justify-around items-center gap-x-6 gap-y-8 px-4 sm:px-0">
-
-          <div v-for="partner in partners" :key="partner.name"
-            class="relative group flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 w-40 sm:w-48">
-
-            <div
-              class="absolute inset-0 m-auto w-32 h-32 rounded-full bg-primary/20 dark:bg-primary/15 blur-2xl -z-10 transition-all duration-300 group-hover:opacity-75 group-hover:scale-125">
-            </div>
-
-            <img :src="partner.src" :alt="partner.name" class="h-16 lg:h-20 object-contain mb-2 animate-floating" />
-            <p class="text-base font-medium text-muted-foreground">{{ partner.name }}</p>
-          </div>
-        </div>
       </div>
 
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <a v-for="partner in partners" :key="partner.name" :href="partner.href" target="_blank"
+          rel="noopener noreferrer" class="group relative block h-full">
+          <div
+            class="relative bg-white rounded-xl p-6 h-full flex flex-col items-center justify-between transition-all duration-300 border shadow-lg shadow-primary/30 border-gray-100 hover:scale-105 hover:shadow-xl hover:shadow-primary/30">
+            <div class="h-28 flex items-center justify-center mb-4">
+              <img :src="partner.src" :alt="partner.name"
+                class="h-20 object-contain transition-transform duration-300 group-hover:scale-105" />
+            </div>
+
+            <p class="text-base font-medium text-center text-gray-700">
+              {{ partner.name }}
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-@keyframes floating {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-6px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.animate-floating {
-  animation: floating 3s ease-in-out infinite;
-}
-</style>
