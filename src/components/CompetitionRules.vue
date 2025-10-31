@@ -40,18 +40,18 @@ const sanctions = [
 <template>
   <section id="quy-che" class="container py-12 sm:py-16">
     <div class="text-center mb-4 px-4 md:px-32">
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+      <h2 class="text-3xl md:text-4xl text-center font-bold mb-2 text-primary">
         QUY CHẾ CUỘC THI
       </h2>
-
-      <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-10">
+      <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
+      <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground my-4">
         Các quy định dưới đây áp dụng cho tất cả đội tham gia hackathon. Vui lòng đọc kỹ và tuân thủ.
       </h3>
     </div>
 
     <div class="max-w-4xl mx-auto mt-12">
       <Card
-        :class="['bg-card', active !== null ? 'ring-2 ring-primary-500 ring-offset-2 ring-offset-background shadow-xl shadow-primary/30' : '']">
+        :class="['bg-card', active !== null ? 'ring-1 ring-primary-500 ring-offset-2 ring-offset-background shadow-xl shadow-primary/30' : '']">
         <CardHeader class="py-0">
           <div class="p-0 flex flex-col items-center mt-[-20px]">
             <div
@@ -110,8 +110,8 @@ const sanctions = [
                       </span>
                     </div>
                     <div class="flex-1">
-                      <div class="font-semibold text-gray-900 dark:text-gray-100">{{ item.title }}</div>
-                      <div class="text-sm text-muted-foreground mt-1">{{ item.detail }}</div>
+                      <div class="font-semibold text-primary">{{ item.title }}</div>
+                      <div class="text-sm mt-1">{{ item.detail }}</div>
                     </div>
                   </li>
                 </ul>
