@@ -49,7 +49,7 @@ const sanctions = [
       </h3>
     </div>
 
-    <div class="max-w-4xl mx-auto mt-12">
+    <div class="max-w-5xl mx-auto mt-12">
       <Card
         :class="['bg-card', active !== null ? 'ring-1 ring-primary-500 ring-offset-2 ring-offset-background shadow-xl shadow-primary/30' : '']">
         <CardHeader class="py-0">
@@ -76,7 +76,7 @@ const sanctions = [
             ]">
               <div>
                 <ul
-                  class="list-disc pl-5 space-y-3 text-base text-justify md:text-sm leading-relaxed text-foreground marker:text-primary">
+                  class="list-disc pl-5 space-y-3 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
                   <li v-for="(item, idx) in benefits" :key="idx">{{ item }}</li>
                 </ul>
               </div>
@@ -111,7 +111,7 @@ const sanctions = [
                     </div>
                     <div class="flex-1">
                       <div class="font-semibold text-primary">{{ item.title }}</div>
-                      <div class="text-sm mt-1">{{ item.detail }}</div>
+                      <div class="text-sm md:text-[16px] mt-1">{{ item.detail }}</div>
                     </div>
                   </li>
                 </ul>

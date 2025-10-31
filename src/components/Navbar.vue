@@ -60,7 +60,7 @@ const isOpen = ref<boolean>(false);
     <a href="/" class="font-bold text-lg flex items-center">
       <ChevronsDown
         class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-      BlockAiThon
+      <span class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">BlockAiThon</span>
     </a>
     <!-- Mobile -->
     <div class="flex items-center lg:hidden">

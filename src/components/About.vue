@@ -82,7 +82,7 @@ const iconMap: Record<
             <CardTitle class="text-xl font-bold">{{ title }}</CardTitle>
           </CardHeader>
 
-          <CardContent class="text-muted-foreground text-center px-6 pb-6">
+          <CardContent class="text-muted-foreground text-sm md:text-[16px] text-center px-6 pb-6">
             {{ description }}
           </CardContent>
         </Card>

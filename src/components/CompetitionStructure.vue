@@ -103,14 +103,14 @@ const sections: Section[] = [
                     <div class="flex items-center gap-3">
                         <component :is="sec.icon" class="h-6 w-6 text-primary" />
                         <CardTitle
-                            class="text-base md:text-lg font-semibold transition-colors duration-300 group-hover:text-primary">
+                            class="text-base md:text-xl font-semibold transition-colors duration-300 group-hover:text-primary">
                             {{ sec.title }}
                         </CardTitle>
                     </div>
 
                     <CardDescription class="mt-1">
                         <ul
-                            class="mt-2 space-y-2 text-sm md:text-[15px] leading-relaxed marker:text-primary list-disc pl-5">
+                            class="mt-2 space-y-2 text-sm md:text-[16px] leading-relaxed marker:text-primary list-disc pl-5">
                             <li v-for="(b, i) in sec.bullets" :key="i" v-html="b" />
                         </ul>
                     </CardDescription>

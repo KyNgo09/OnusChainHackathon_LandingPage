@@ -110,7 +110,7 @@ function onLeave() {
                         {{ track.name }}
                       </span>
                     </CardTitle>
-                    </div>
+                  </div>
 
                   <div class="-mr-4 -mt-4">
                     <TrackIcon :variant="track.icon" :size="44" />
@@ -120,7 +120,7 @@ function onLeave() {
             </CardHeader>
 
             <CardContent class="p-10 pt-0 flex items-center justify-center text-justify">
-              <p class="text-sm text-muted-foreground">
+              <p class="text-sm md:text-[16px] text-muted-foreground">
                 {{ track.description }}
               </p>
             </CardContent>
@@ -133,8 +133,7 @@ function onLeave() {
       <Button v-for="(t, idx) in tracks" :key="t.id" variant="ghost" size="sm"
         class="h-10 w-10 rounded-full p-0 flex items-center justify-center ring-1" :class="idx === selectedIndex
           ? 'bg-gradient-to-r from-[#D247BF] to-primary text-white shadow-md hover:text-white'
-          : 'text-muted-foreground'" @click="goTo(idx)"
-        :aria-pressed="idx === selectedIndex">
+          : 'text-muted-foreground'" @click="goTo(idx)" :aria-pressed="idx === selectedIndex">
         {{ idx + 1 }}
       </Button>
     </div>
