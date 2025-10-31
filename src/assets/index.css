@@ -171,7 +171,7 @@ html {
     --radius: 0.5rem;
   }
 
-  .dark {
+  /* .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -182,7 +182,7 @@ html {
     --popover-foreground: 210 40% 98%;
 
     /* Đây là màu xanh chính (chế độ tối) */
-    --primary: 217.2 91.2% 59.8%;
+    /* --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -200,7 +200,7 @@ html {
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 217.2 91.2% 59.8%;
-  }
+  } */ 
 }
 
 @layer base {

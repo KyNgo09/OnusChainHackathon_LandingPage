@@ -45,10 +45,11 @@ import { ArrowRight } from "lucide-vue-next";
 
 
           <div
-            class="w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner relative z-10">
-            <img src="/runner.png" alt="Robot Illustration"
-              class="w-4/5 max-w-xs rounded-xl object-contain animate-floating" />
+            class="w-[22rem] h-[22rem] sm:w-[26rem] sm:h-[26rem] md:w-[32rem] md:h-[32rem] rounded-2xl bg-gradient-to-tr flex items-center justify-center shadow-inner relative z-10">
+            <img src="@/assets/Logo-BlockAiThon.png" alt="Logo BlockAiThon"
+              class="w-full h-full max-w-none max-h-none rounded-xl object-contain animate-floating" />
           </div>
+
         </div>
 
 

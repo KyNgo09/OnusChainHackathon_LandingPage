@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-import { useColorMode } from "@vueuse/core";
-const mode = useColorMode();
-mode.value = "dark";
+// import { useColorMode } from "@vueuse/core";
+// const mode = useColorMode();
+// mode.value = "dark";
 
 import {
   NavigationMenu,
@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 import { ChevronsDown, Menu } from "lucide-vue-next";
-import ToggleTheme from "./ToggleTheme.vue";
+// import ToggleTheme from "./ToggleTheme.vue";
 
 interface RouteProps {
   href: string;
@@ -55,8 +55,6 @@ const isOpen = ref<boolean>(false);
 
 <template>
   <header :class="{
-    'shadow-light': mode === 'light',
-    'shadow-dark': mode === 'dark',
     'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
   }">
     <a href="/" class="font-bold text-lg flex items-center">
@@ -154,11 +152,11 @@ const isOpen = ref<boolean>(false);
 </template>
 
 <style scoped>
-.shadow-light {
+/* .shadow-light {
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
 }
 
 .shadow-dark {
   box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
-}
+} */
 </style>
