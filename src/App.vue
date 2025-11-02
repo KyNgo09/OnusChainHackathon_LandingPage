@@ -12,7 +12,7 @@ import OrgPart from "./components/Organizers-Partners.vue";
 // import Pricing from "./components/Pricing.vue";
 // import Community from "./components/Community.vue";
 // import Contact from "./components/Contact.vue";
-// import FAQ from "./components/FAQ.vue";
+// import Team from "./components/Teams.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
@@ -31,6 +31,6 @@ import Footer from "./components/Footer.vue";
   <!-- <Pricing /> -->
   <!-- <Contact />
   <FAQ /> -->
-  <!-- <FAQ /> -->
+  <!-- <Team /> -->
   <Footer />
 </template>

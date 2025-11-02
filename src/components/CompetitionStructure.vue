@@ -82,8 +82,8 @@ const sections: Section[] = [
         <div
             class="pointer-events-none absolute -z-10 right-[-8%] bottom-0 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
 
-        <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-            Cơ cấu cuộc thi
+        <h2 class="text-3xl md:text-4xl text-center text-primary font-bold mb-4">
+            CƠ CẤU CUỘC THI
         </h2>
 
         <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-10">

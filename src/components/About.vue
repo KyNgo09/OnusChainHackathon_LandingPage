@@ -52,7 +52,7 @@ const iconMap: Record<
     <!-- SECTION HEADER -->
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-4">
-        Đơn Vị Tổ Chức & Đồng Hành
+        GIỚI THIỆU
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
     </div>
