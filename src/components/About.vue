@@ -36,7 +36,7 @@ const iconMap: Record<
 <template>
   <section id="gioi-thieu" class="container py-24 sm:py-20">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-2 text-primary">
+      <h2 class="text-[30px] md:text-[40px] text-center font-bold mb-2 text-primary">
         GIỚI THIỆU
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
@@ -44,11 +44,7 @@ const iconMap: Record<
 
     <div class="grid lg:grid-cols-3 place-items-center lg:gap-12 gap-12">
       <div class="lg:col-span-1 w-full flex justify-center items-center relative p-4 order-2 lg:order-1">
-        <!-- <div
-          class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
-        </div> -->
-
-      <img src="/Logo-BlockAIThon.png" alt="Hero Image" class="relative w-full max-w-md h-auto animate-floating" />
+        <img src="/Logo-BlockAIThon.png" alt="Hero Image" class="relative w-full max-w-md h-auto animate-floating" />
 
       </div>
 
@@ -60,7 +56,7 @@ const iconMap: Record<
               <div class="flex flex-col gap-1">
                 <CardTitle class="text-base md:text-lg font-bold text-primary leading-tight">
                   <span
-                    class="block text-transparent text-lg md:text-xl font-bold bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text uppercase">
+                    class="block text-transparent text-[20px] font-bold bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text uppercase">
                     {{ title }}
                   </span>
                 </CardTitle>

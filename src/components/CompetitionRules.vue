@@ -73,11 +73,11 @@ function getVariant(title: string) {
 <template>
   <section id="quy-che" class="container py-12 sm:py-16">
     <div class="text-center mb-4 px-4 md:px-32">
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-2 text-primary">
+      <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         QUY CHẾ CUỘC THI
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-      <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground my-4">
+      <h3 class=" mx-auto text-lg md:text-[24px] text-center text-muted-foreground my-4">
         Các quy định dưới đây áp dụng cho tất cả đội tham gia hackathon. Vui lòng đọc kỹ và tuân thủ.
       </h3>
     </div>
@@ -90,7 +90,7 @@ function getVariant(title: string) {
             <div
               class="flex flex-wrap justify-center gap-2 mb-4 bg-background ring-1 rounded-sm ring-primary-500 ring-offset-2 ring-offset-background p-0">
               <button v-for="(t, i) in tabs" :key="t" @click="active = i" :aria-pressed="active === i" :class="[
-                'px-3 py-2 rounded-md text-xs sm:text-sm md:text-sm font-medium text-destructive text-center whitespace-normal',
+                'px-3 py-2 rounded-md text-[13px] sm:text-[14px] font-medium text-destructive text-center whitespace-normal',
                 active === i
                   ? 'bg-gradient-to-r from-[#D247BF] to-primary shadow-md text-white'
                   : 'bg-transparent text-muted-foreground hover:text-primary'
@@ -110,7 +110,7 @@ function getVariant(title: string) {
               <div v-for="(con, idx) in benefits_responsibilities" :key="idx" class="pb-4">
                 <div class="flex items-center gap-3 mb-2">
                   <TrackIcon :variant="getVariant(con.title)" :size="36" />
-                  <h4 class="font-bold text-xl text-primary uppercase pb-2">{{ con.title }}</h4>
+                  <h4 class="font-bold text-[20px] text-primary uppercase pb-2">{{ con.title }}</h4>
                 </div>
                 <ul
                   class="list-disc pl-5 space-y-1 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
@@ -139,10 +139,10 @@ function getVariant(title: string) {
                       </span>
                     </div>
                     <div class="flex-1">
-                      <div class="font-semibold text-primary">{{ item.title }}</div>
-                      <!-- <div class="text-sm md:text-[16px] mt-1">{{ item.detail }}</div> -->
+                      <div class="text-[16px] font-semibold text-primary">{{ item.title }}</div>
                       <div>
-                        <ul class="list-disc pl-5 space-y-1 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
+                        <ul
+                          class="list-disc pl-5 space-y-1 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
                           <li v-for="(it, idt) in item.items" :key="idt">{{ it }}</li>
                         </ul>
                       </div>

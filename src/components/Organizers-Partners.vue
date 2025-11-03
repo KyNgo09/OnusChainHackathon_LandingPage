@@ -59,17 +59,10 @@ const implementers: Unit[] = [
 <template>
   <section id="partners" class="container py-12 sm:py-16 ">
 
-    <!-- <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-4">
-        ĐƠN VỊ TỔ CHỨC & ĐỒNG HÀNH
-      </h2>
-      <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-    </div> -->
-
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
       <div class="text-center">
-        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-8">
+        <h3 class="text-[20px] md:text-[24px] text-center font-semibold text-primary mb-8">
           Đơn vị bảo trợ
         </h3>
 
@@ -82,7 +75,7 @@ const implementers: Unit[] = [
       </div>
 
       <div class="text-center">
-        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-8">
+        <h3 class="text-[20px] md:text-[24px] text-center font-semibold text-primary mb-8">
           Đơn vị tổ chức
         </h3>
 
@@ -95,7 +88,7 @@ const implementers: Unit[] = [
       </div>
 
       <div class="text-center">
-        <h3 class="text-xl md:text-2xl text-center font-semibold text-primary mb-8">
+        <h3 class="text-[20px] md:text-[24px] text-center font-semibold text-primary mb-8">
           Đơn vị triển khai
         </h3>
 

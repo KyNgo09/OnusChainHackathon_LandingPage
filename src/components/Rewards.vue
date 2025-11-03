@@ -78,19 +78,19 @@ function splitBenefit(text: string) {
 <template>
   <section id="giai-thuong" class="container py-24 sm:py-32">
     <div class="text-center mb-4 px-4 md:px-32">
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-2 text-primary">
+      <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         CƠ CẤU GIẢI THƯỞNG
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-      <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground my-4">
+      <h3 class="mx-auto text-lg md:text-[24px] text-center text-muted-foreground my-4">
         <span class="font-bold text-black">10.000 USD tiền mặt</span>
         <span class="block sm:inline text-muted-foreground"> và các phần thưởng giá trị khác</span>
       </h3>
     </div>
     <div class="max-w-7xl mx-auto">
-      <!-- Champion - full width on top -->
       <div class="mb-4">
-        <Card class="relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-sm shadow-primary/30 hover:shadow-xl hover:shadow-primary/30 hover:ring-1 hover:ring-primary/50">
+        <Card
+          class="relative overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-sm shadow-primary/30 hover:shadow-xl hover:shadow-primary/30 hover:ring-1 hover:ring-primary/50">
           <div class="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-white/6 blur-3xl pointer-events-none"></div>
           <div class="confetti pointer-events-none" aria-hidden="true">
             <span class="confetti-piece bg-yellow-400" style="left:6%; --dur:3.8s; --delay:0.2s"></span>
@@ -106,27 +106,30 @@ function splitBenefit(text: string) {
           <CardHeader class="p-6 md:p-6 items-center gap-4 relative z-10">
             <div class="flex items-center gap-4">
               <div class="rounded-full bg-white/12 p-3 flex items-center justify-center shadow-lg shadow-yellow-500/30">
-                <component :is="champion.icon" class="w-10 h-10 text-yellow-500" stroke-width="2.2" aria-hidden="true" />
+                <component :is="champion.icon" class="w-10 h-10 text-yellow-500" stroke-width="2.2"
+                  aria-hidden="true" />
               </div>
               <div>
-                <h3 class="text-lg md:text-xl text-yellow-500 font-bold tracking-tight uppercase">{{ champion.title }}</h3>
+                <h3 class="text-[18px] md:text-[20px] text-yellow-500 font-bold tracking-tight uppercase">{{
+                  champion.title }}</h3>
                 <p class="text-sm opacity-80">Gói giải thưởng cao nhất của cuộc thi</p>
               </div>
             </div>
 
             <div class="text-center">
-              <div class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">
+              <div
+                class="text-4xl sm:text-[40px] md:text-[48px] font-extrabold leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">
                 {{ champion.prize }}
               </div>
 
             </div>
           </CardHeader>
           <CardContent class="p-6 pt-0 md:px-64 md:pb-8 bg-white/6 relative z-10">
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1 list-inside list-disc">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1 list-inside list-disc text-sm md:text-[16px]">
               <li v-for="(b, i) in champion.benefits" :key="i">
                 <template v-if="splitBenefit(b).rest">
                   <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
-                  <span>{{" " + splitBenefit(b).rest }}</span>
+                  <span>{{ " " + splitBenefit(b).rest }}</span>
                 </template>
                 <template v-else>
                   <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
@@ -137,28 +140,29 @@ function splitBenefit(text: string) {
         </Card>
       </div>
 
-      <!-- Runners - three cards below -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-  <Card v-for="award in runners" :key="award.title" class="group hover:scale-[1.02] transform transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-sm shadow-primary/30 hover:shadow-xl hover:shadow-primary/30 hover:border-primary/50">
+        <Card v-for="award in runners" :key="award.title"
+          class="group hover:scale-[1.02] transform transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-sm shadow-primary/30 hover:shadow-xl hover:shadow-primary/30 hover:border-primary/50">
           <CardHeader class="flex items-center gap-1 p-5 pb-2 md:pt-4">
             <div :class="['rounded-full p-3 shadow-md shadow-primary/30', award.iconColor + ' bg-white/6']">
               <component :is="award.icon" class="w-8 h-8 text-primary" stroke-width="2.2" aria-hidden="true" />
             </div>
             <div class="flex-1">
-              <CardTitle class="text-lg font-bold uppercase">{{ award.title }}</CardTitle>
+              <CardTitle class="text-[18px] font-bold uppercase">{{ award.title }}</CardTitle>
             </div>
             <div class="text-right">
-              <div class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">
+              <div
+                class="text-[24px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">
                 {{ award.prize }}
               </div>
             </div>
           </CardHeader>
-          <CardContent class="px-auto pb-6">
+          <CardContent class="px-auto pb-6 text-sm md:text-[16px]">
             <ul class="space-y-1 list-disc list-inside">
               <li v-for="(b, i) in award.benefits" :key="i">
                 <template v-if="splitBenefit(b).rest">
                   <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
-                  <span>{{" " + splitBenefit(b).rest }}</span>
+                  <span>{{ " " + splitBenefit(b).rest }}</span>
                 </template>
                 <template v-else>
                   <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>

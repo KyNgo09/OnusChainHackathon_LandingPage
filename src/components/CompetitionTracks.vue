@@ -70,11 +70,11 @@ function onLeave() {
 <template>
   <section id="bang-thi" class="container py-12 sm:py-16">
     <div class="text-center mb-4 px-4 md:px-32">
-      <h2 class="text-3xl md:text-4xl text-center font-bold mb-2 text-primary">
+      <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         CÁC BẢNG THI
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-      <h3 class="md:w-2/3 lg:w-1/2 mx-auto text-xl text-center text-muted-foreground my-4">
+      <h3 class=" mx-auto text-lg md:text-[24px] text-center text-muted-foreground my-4">
         Từ Blockchain đến AI, và sự kết hợp đầy tiềm năng giữa cả hai –
         đây là nơi những ý tưởng táo bạo được ươm mầm, để công nghệ trở thành động lực thay đổi thế giới số.
       </h3>
@@ -102,11 +102,11 @@ function onLeave() {
               <div class="flex flex-col gap-2 p-4">
                 <div class="flex items-start justify-between">
                   <div>
-                    <CardTitle class="text-lg font-bold md:text-2xl text-primary">
+                    <CardTitle class="text-[18px] font-bold md:text-[24px] text-primary">
                       {{ track.title }}
                       <br />
                       <span
-                        class="text-transparent text-2xl font-bold bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+                        class="text-transparent text-[24px] font-bold bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
                         {{ track.name }}
                       </span>
                     </CardTitle>
