@@ -1,39 +1,72 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import TrackIcon from '@/components/TrackIcon.vue'
 
 const tabs = ['QUYỀN LỢI & TRÁCH NHIỆM ĐỘI THI', 'CÁC HÌNH THỨC KỶ LUẬT']
 const active = ref(0)
 
-const benefits = [
-  'Không được thay đổi thành viên đội thi trong suốt quá trình tham gia.',
-  'Đội thi có quyền phản hồi và khiếu nại qua email chính thức của Ban Tổ chức.',
-  'Ít nhất 50% thành viên phải tham gia các hoạt động do Ban Tổ chức tổ chức.',
-  'Đội thi phải tuân thủ nội quy, thời hạn nộp hồ sơ và hướng dẫn tham gia sự kiện trực tuyến.',
-  'Mọi thông tin nộp cho Ban Tổ chức phải trung thực, sai lệch sẽ bị xử lý trách nhiệm.',
-  'Nghiêm cấm gian lận, vi phạm đạo đức, pháp luật hoặc xúc phạm cuộc thi và các bên liên quan.',
-  'Đội thi tự chịu trách nhiệm về bản quyền và bảo mật hồ sơ dự thi cùng tài liệu từ Ban Tổ chức.',
-  'Mọi buổi kết nối với cố vấn, nhà tài trợ, nhà đầu tư phải được hẹn trước và báo cho Ban Tổ chức ít nhất 24 giờ.'
-];
+const benefits_responsibilities = [
+  {
+    title: 'Quyền lợi',
+    items: [
+    'Được tiếp cận miễn phí nguồn tài nguyên Công nghệ đa dạng.',
+    'Hỗ trợ phát triển đào tạo chuyên sâu, tư vấn kỹ thuật (đặc biệt cho top 30).',
+    'Mở rộng cơ hội nghề nghiệp, kêu gọi vốn đầu tư.',
+    'Đội thi có quyền thông báo tới Ban Tổ chức về các vấn đề phát sinh.',
+    'Đội thi có quyền khiếu nại về kết quả thi hoặc các vi phạm của đội khác qua email chính thức.'
+  ]
+  },
+  {
+    title: 'Trách nhiệm',
+    items: [
+      'Phải có trên 50% thành viên tham gia các hoạt động và sự kiện do BTC tổ chức.',
+      'Tuân thủ nội quy và thời hạn nộp hồ sơ của BTC đề ra.',
+      'Tự chịu trách nhiệm về bản quyền sở hữu trí tuệ và giữ bí mật hồ sơ dự thi.',
+      'Cam đoan mọi thông tin cung cấp là đúng sự thật và chịu trách nhiệm nếu bị phát hiện gian dối.',
+      'Không được gian lận, vi phạm đạo đức, pháp luật, hay xúc phạm cuộc thi và các đội thi khác.',
+      'Các đội thi không được thay đổi cơ cấu thành viên khi đã bắt đầu cuộc thi.',
+      'Mọi buổi gặp mặt (Mentoring, Nhà đầu tư...) liên quan đến dự án phải được lên lịch và báo trước cho BTC ít nhất 24 tiếng.'
+    ]
+  }
+]
 
 const sanctions = [
   {
     title: 'Nhắc nhở',
-    detail: 'Áp dụng với lỗi nhẹ, lần đầu vi phạm, chưa ảnh hưởng nghiêm trọng đến cuộc thi. Ban Tổ chức sẽ gửi thông báo và yêu cầu khắc phục ngay.'
+    items: [
+      'Lỗi nhẹ, lần đầu, chưa nghiêm trọng.',
+      'Yêu cầu khắc phục ngay qua thông báo chính thức.'
+    ]
   },
   {
-    title: 'Cảnh cáo',
-    detail: 'Áp dụng với lỗi tái phạm hoặc vi phạm có mức độ, ảnh hưởng đến hình ảnh cuộc thi. Cảnh cáo được công bố nội bộ.'
+    title: 'Cảnh cáo', 
+    items: [
+      'Lỗi tái phạm hoặc mức độ nghiêm trọng vừa, ảnh hưởng đến uy tín cuộc thi.',
+      'Công bố trong phạm vi nội bộ cuộc thi.'
+    ]
   },
   {
     title: 'Trừ điểm',
-    detail: 'Áp dụng khi vi phạm trong nộp hồ sơ, thuyết trình hoặc triển khai dự án. Mức trừ điểm do Ban Tổ chức quyết định theo mức độ vi phạm.'
+    items: [
+      'Vi phạm quy trình (nộp chậm, gian lận số liệu, sai cấu trúc hồ sơ...).',
+      'Mức trừ điểm tùy theo quyết định của BTC.'
+    ]
   },
   {
     title: 'Loại khỏi cuộc thi',
-    detail: 'Áp dụng với vi phạm nghiêm trọng như sao chép ý tưởng, gian lận, cung cấp thông tin sai, vi phạm đạo đức/pháp luật hoặc gây mất an toàn. Quyết định loại trừ có thể được công bố rộng rãi.'
+    items: [
+      'Vi phạm nghiêm trọng: Sao chép, gian lận, vi phạm bản quyền, đạo đức, pháp luật.',
+      'BTC có quyền công bố rộng rãi quyết định loại trừ.'
+    ]
   }
 ];
+
+function getVariant(title: string) {
+  const t = (title || '').toLowerCase()
+  if (t.includes('quy') || t.includes('quyền')) return 'benefit'
+  return 'responsibility'
+}
 
 </script>
 
@@ -68,26 +101,22 @@ const sanctions = [
           </div>
         </CardHeader>
 
-        <CardContent class="p-6 pt-0">
+        <CardContent class="p-6 py-0">
           <div class="flex flex-col md:flex-row items-center gap-2 relative" v-if="active === 0">
             <div :class="[
               'flex-1',
               'bg-background/5 dark:bg-background/10 p-4 rounded-lg'
             ]">
-              <div>
+              <div v-for="(con, idx) in benefits_responsibilities" :key="idx" class="pb-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <TrackIcon :variant="getVariant(con.title)" :size="36" />
+                  <h4 class="font-bold text-xl text-primary uppercase pb-2">{{ con.title }}</h4>
+                </div>
                 <ul
-                  class="list-disc pl-5 space-y-3 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
-                  <li v-for="(item, idx) in benefits" :key="idx">{{ item }}</li>
+                  class="list-disc pl-5 space-y-1 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
+                  <li v-for="(item, idx) in con.items" :key="idx">{{ item }}</li>
                 </ul>
               </div>
-            </div>
-
-            <div class="flex-shrink-0">
-              <img :src="`roboto.png`" :alt="`Image describing benefits `"
-                className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 animate-floating" />
-            </div>
-            <div
-              class="z-100 absolute right-20 w-44 h-72  lg:w-64 lg:h-80 rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl">
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center gap-2 relative" v-else>
@@ -111,7 +140,12 @@ const sanctions = [
                     </div>
                     <div class="flex-1">
                       <div class="font-semibold text-primary">{{ item.title }}</div>
-                      <div class="text-sm md:text-[16px] mt-1">{{ item.detail }}</div>
+                      <!-- <div class="text-sm md:text-[16px] mt-1">{{ item.detail }}</div> -->
+                      <div>
+                        <ul class="list-disc pl-5 space-y-1 text-justify text-sm md:text-[16px] leading-relaxed text-foreground marker:text-primary">
+                          <li v-for="(it, idt) in item.items" :key="idt">{{ it }}</li>
+                        </ul>
+                      </div>
                     </div>
                   </li>
                 </ul>
