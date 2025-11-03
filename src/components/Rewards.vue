@@ -1,66 +1,54 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy, Medal, Gem, Gift } from "lucide-vue-next";
+import logoOnuschain from '@/assets/logo_onus2.png';
 
 const awards = [
   {
     title: "Quán quân",
-    prize: "50.000.000 VNĐ",
+    prize: "100.000.000 VNĐ",
     icon: Trophy,
     iconColor: "text-blue-500", // <-- Thay đổi màu sắc
     prizeColor: "text-blue-500", // <-- Thay đổi màu sắc
     iconLabel: "Trophy",
-    benefits: [
-      "Hiện kim: 50.000.000 VNĐ",
-      "Gói truyền thông - PR: 20.000.000 VNĐ",
-      "Gói Mentoring và cố vấn: 30.000.000 VNĐ",
-      "Gói Launchpad Onuschain: 50.000.000 VNĐ",
-    ],
   },
   {
     title: "Á quân",
-    prize: "20.000.000 VNĐ",
+    prize: "50.000.000 VNĐ",
     icon: Medal,
     iconColor: "text-purple-500", // <-- Thay đổi màu sắc
     prizeColor: "text-purple-500", // <-- Thay đổi màu sắc
     iconLabel: "Silver Medal",
-    benefits: [
-      "Hiện kim: 20.000.000 VNĐ",
-      "Gói Mentoring và cố vấn: 30.000.000 VNĐ",
-      "Gói Launchpad Onuschain: 50.000.000 VNĐ",
-    ],
   },
   {
     title: "Quý quân",
-    prize: "10.000.000 VNĐ",
+    prize: "15.000.000 VNĐ",
     icon: Gem,
     iconColor: "text-green-500", // <-- Thay đổi màu sắc
     prizeColor: "text-green-500", // <-- Thay đổi màu sắc
     iconLabel: "Gem",
-    benefits: [
-      "Hiện kim: 10.000.000 VNĐ",
-      "Gói hỗ trợ kỹ thuật/văn phòng: 5.000.000 VNĐ",
-      "Gói Launchpad Onuschain: 50.000.000 VNĐ",
-    ],
   },
   {
-    title: "Khuyến khích",
-    prize: "5.000.000 VNĐ",
+    title: "03 Giải Khuyến khích",
+    prize: "Tổng trị giá: 16.000.000 VNĐ",
     icon: Gift,
     iconColor: "text-orange-500", // <-- Thay đổi màu sắc
     prizeColor: "text-orange-500", // <-- Thay đổi màu sắc
     iconLabel: "Gift",
-    benefits: [
-      "Hiện kim: 5.000.000 VNĐ (x3 giải)",
-      "Gói mentoring kỹ thuật: 3.000.000 VNĐ",
-      "Hỗ trợ demo sản phẩm",
-      "Hỗ trợ truyền thông Startup",
-    ],
   },
+  {
+    title: "Giải Đặc biệt",
+    prize: "Tổng giá trị lên đến 150.000.000 VND",
+    icon: Gift,
+    iconColor: "text-red-500", // <-- Thay đổi màu sắc
+    prizeColor: "text-red-500", // <-- Thay đổi màu sắc
+    iconLabel: "Special Gift",
+  }
 ];
 
 const champion = awards[0]
-const runners = awards.slice(1)
+const runners = awards.slice(1, 4)
+const special = awards[4]
 
 function splitBenefit(text: string) {
   if (!text) return { prefix: '', rest: '' }
@@ -76,16 +64,12 @@ function splitBenefit(text: string) {
 </script>
 
 <template>
-  <section id="giai-thuong" class="container py-24 sm:py-32">
+  <section id="giai-thuong" class="container py-24 pb-0">
     <div class="text-center mb-4 px-4 md:px-32">
       <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         CƠ CẤU GIẢI THƯỞNG
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-      <h3 class="mx-auto text-lg md:text-[24px] text-center text-muted-foreground my-4">
-        <span class="font-bold text-black">10.000 USD tiền mặt</span>
-        <span class="block sm:inline text-muted-foreground"> và các phần thưởng giá trị khác</span>
-      </h3>
     </div>
     <div class="max-w-7xl mx-auto">
       <div class="mb-4">
@@ -103,7 +87,7 @@ function splitBenefit(text: string) {
             <span class="confetti-piece bg-violet-400" style="left:76%; --dur:5.2s; --delay:0.5s"></span>
             <span class="confetti-piece bg-fuchsia-400" style="left:86%; --dur:4.8s; --delay:0.7s"></span>
           </div>
-          <CardHeader class="p-6 md:p-6 items-center gap-4 relative z-10">
+          <CardHeader class="p-12 md:p-12 items-center gap-4 relative z-10">
             <div class="flex items-center gap-4">
               <div class="rounded-full bg-white/12 p-3 flex items-center justify-center shadow-lg shadow-yellow-500/30">
                 <component :is="champion.icon" class="w-10 h-10 text-yellow-500" stroke-width="2.2"
@@ -124,26 +108,13 @@ function splitBenefit(text: string) {
 
             </div>
           </CardHeader>
-          <CardContent class="p-6 pt-0 md:px-64 md:pb-8 bg-white/6 relative z-10">
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-1 list-inside list-disc text-sm md:text-[16px]">
-              <li v-for="(b, i) in champion.benefits" :key="i">
-                <template v-if="splitBenefit(b).rest">
-                  <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
-                  <span>{{ " " + splitBenefit(b).rest }}</span>
-                </template>
-                <template v-else>
-                  <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
-                </template>
-              </li>
-            </ul>
-          </CardContent>
         </Card>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         <Card v-for="award in runners" :key="award.title"
           class="group hover:scale-[1.02] transform transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-sm shadow-primary/30 hover:shadow-xl hover:shadow-primary/30 hover:border-primary/50">
-          <CardHeader class="flex items-center gap-1 p-5 pb-2 md:pt-4">
+          <CardHeader class="flex items-center gap-1 p-6">
             <div :class="['rounded-full p-3 shadow-md shadow-primary/30', award.iconColor + ' bg-white/6']">
               <component :is="award.icon" class="w-8 h-8 text-primary" stroke-width="2.2" aria-hidden="true" />
             </div>
@@ -152,24 +123,32 @@ function splitBenefit(text: string) {
             </div>
             <div class="text-right">
               <div
-                class="text-[24px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">
+                class="md:text-[24px] text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">
                 {{ award.prize }}
               </div>
             </div>
           </CardHeader>
-          <CardContent class="px-auto pb-6 text-sm md:text-[16px]">
-            <ul class="space-y-1 list-disc list-inside">
-              <li v-for="(b, i) in award.benefits" :key="i">
-                <template v-if="splitBenefit(b).rest">
-                  <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
-                  <span>{{ " " + splitBenefit(b).rest }}</span>
-                </template>
-                <template v-else>
-                  <span class="font-semibold">{{ splitBenefit(b).prefix }}</span>
-                </template>
-              </li>
-            </ul>
-          </CardContent>
+        </Card>
+      </div>
+      <!-- SPECIAL BANNER -->
+      <div class="mb-8">
+        <Card class="w-full overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 shadow-sm shadow-primary/30 hover:shadow-xl hover:shadow-primary/30 hover:ring-1 hover:ring-primary/50">
+          <div class="rounded-lg overflow-hidden bg-gradient-to-r from-[#0528b9] to-[#0b84ff] text-white">
+            <div class="max-w-7xl mx-auto px-6 py-6 md:py-8">
+              <div class="flex flex-col md:flex-row items-center md:items-stretch gap-4 md:gap-96 px-2 md:px-12">
+                <div class="flex-1 md:p-6"> 
+                  <div class="text-2xl md:text-3xl font-extrabold uppercase">{{ special.title }}</div>
+                  <div class="mt-1 text-sm md:text-base opacity-90">
+                      Gói Launchpad OnusChain ĐỘC QUYỀN
+                  </div>
+                  <div class="mt-1 text-[24px] font-extrabold md:text-xl">{{ special.prize }}</div>
+                </div>
+                <div class="flex-shrink-0 w-36 md:w-48 lg:w-56 md:ml-auto">
+                  <img :src="logoOnuschain" alt="Onus logo" class="w-full h-auto object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
         </Card>
       </div>
     </div>

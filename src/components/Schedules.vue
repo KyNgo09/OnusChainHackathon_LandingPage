@@ -68,27 +68,21 @@ const keyMilestones = [
           'bg-background/50 shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20',
           round.border,
         ]">
-          <CardHeader class="flex flex-row items-center gap-3 space-y-0 p-4 md:p-6">
-            <component :is="round.icon" :class="[round.iconColor, 'w-8 h-8']" stroke-width="2.4" />
-            <CardTitle class="text-[20px] font-bold">
+          <CardHeader class="flex flex-col sm:flex-row items-start sm:items-center gap-3 p-4 sm:p-6">
+            <component :is="round.icon" :class="[round.iconColor, 'w-6 h-6 sm:w-8 sm:h-8']" stroke-width="2.4" />
+            <CardTitle class="text-[18px] sm:text-[20px] font-bold">
               {{ round.title }}
             </CardTitle>
           </CardHeader>
           <CardContent class="p-4 md:p-6 pt-0">
-            <div class="grid md:grid-cols-2 gap-4">
-
-              <div v-for="milestone in round.milestones" :key="milestone.description" class="group flex items-start gap-3 p-4 rounded-lg 
-                                bg-green-10/50 border border-gray-700/50 
-                                transition-all duration-300 ease-in-out
-                                hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/20">
-                <Calendar class="w-5 h-5 mt-0.5 text-muted-foreground flex-shrink-0 
-                                 transition-colors duration-300 group-hover:text-primary" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div v-for="milestone in round.milestones" :key="milestone.description" class="group flex items-start gap-3 p-3 sm:p-4 rounded-lg bg-background/5 border border-gray-700/10 transition-all duration-300 ease-in-out hover:border-teal-500 hover:shadow-lg hover:shadow-teal-500/20">
+                <Calendar class="w-5 h-5 sm:w-6 sm:h-6 mt-0.5 sm:mt-0 text-muted-foreground flex-shrink-0 transition-colors duration-300 group-hover:text-primary" />
                 <div>
-                  <div
-                    class="font-medium transition-colors duration-300 group-hover:text-primary text-sm md:text-[16px]">
+                  <div class="font-medium transition-colors duration-300 group-hover:text-primary text-sm sm:text-[15px]">
                     {{ milestone.date }}
                   </div>
-                  <div class="text-sm md:text-[16px] text-muted-foreground">
+                  <div class="text-sm sm:text-[15px] text-muted-foreground">
                     {{ milestone.description }}
                   </div>
                 </div>
@@ -98,24 +92,19 @@ const keyMilestones = [
         </Card>
       </template>
 
-      <Card class="mt-4 border-teal-500">
+        <Card class="mt-4 border-teal-500">
         <CardHeader>
           <CardTitle class="text-[24px] text-center text-primary font-bold">
             Các mốc quan trọng
           </CardTitle>
         </CardHeader>
         <CardContent class="pt-2 pb-4">
-          <div class="grid grid-cols-3 gap-4 text-center">
-            <div v-for="km in keyMilestones" :key="km.title">
-              <div class="text-sm md:text-[16px] text-muted-foreground">{{ km.title }}</div>
-              <div :class="[
-                'text-[20px] font-bold mt-1',
-                km.highlight ? 'text-red-400' : '',
-              ]">
-                {{ km.date }}
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div v-for="km in keyMilestones" :key="km.title">
+                <div class="text-sm sm:text-[16px] text-muted-foreground">{{ km.title }}</div>
+                <div :class="['text-[20px] sm:text-[20px] font-bold mt-1', km.highlight ? 'text-red-400' : '']">{{ km.date }}</div>
               </div>
             </div>
-          </div>
         </CardContent>
       </Card>
     </div>
