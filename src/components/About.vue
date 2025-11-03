@@ -44,11 +44,12 @@ const iconMap: Record<
 
     <div class="grid lg:grid-cols-3 place-items-center lg:gap-12 gap-12">
       <div class="lg:col-span-1 w-full flex justify-center items-center relative p-4 order-2 lg:order-1">
-        <div
+        <!-- <div
           class="absolute inset-0 w-64 h-80 lg:w-80 lg:h-96 m-auto rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl -z-10">
-        </div>
+        </div> -->
 
-        <img src="/roboto.png" alt="Hero Image" class="relative w-4/5 max-w-xs h-auto animate-floating" />
+      <img src="/Logo-BlockAIThon.png" alt="Hero Image" class="relative w-full max-w-md h-auto animate-floating" />
+
       </div>
 
       <div class="lg:col-span-2 grid grid-cols-1 gap-6 w-full order-1 lg:order-2">
