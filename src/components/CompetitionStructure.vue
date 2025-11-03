@@ -83,7 +83,7 @@ const rules = [
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">{{ obj.title }}</span>
                 </h2>
-                <p class="md:w-2/3 lg:w-1/2 text-base text-muted-foreground mt-4">{{ obj.text }}</p>
+                <p class="text-base text-muted-foreground mt-4">{{ obj.text }}</p>
             </div>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <template v-for="(b, idx) in obj.bullets" :key="idx">

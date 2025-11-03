@@ -18,7 +18,7 @@ const sponsors: Unit[] = [
   {
     name: "Trung tâm Hỗ trợ Khởi nghiệp Đổi mới sáng tạo Thành phố Đà Nẵng",
     src: logoDanang,
-    href: "#", // Cập nhật link
+    href: "https://www.facebook.com/TrungtamDISSC/?locale=vi_VN", // Cập nhật link
   },
 ];
 
@@ -27,17 +27,17 @@ const organizers: Unit[] = [
   {
     name: "Onuschain",
     src: logoOnuschain,
-    href: "#", // Cập nhật link
+    href: "https://goonus.io/", // Cập nhật link
   },
   {
     name: "Fundgo Capital",
     src: logoFundgo,
-    href: "#", // Cập nhật link
+    href: "https://fundgo.network/", // Cập nhật link
   },
   {
     name: "HVA Group",
     src: logoHva, // Logo mới
-    href: "#", // Cập nhật link
+    href: "https://hva.group/", // Cập nhật link
   },
 ];
 
@@ -46,12 +46,12 @@ const implementers: Unit[] = [
   {
     name: "Raise Your Future",
     src: logoRise,
-    href: "#", // Cập nhật link
+    href: "https://www.facebook.com/RiseYourFuture.VN", // Cập nhật link
   },
   {
     name: "HUB Network",
     src: logoHub,
-    href: "#", // Cập nhật link
+    href: "https://www.facebook.com/profile.php?id=61566071287402", // Cập nhật link
   },
 ];
 </script>
@@ -59,12 +59,12 @@ const implementers: Unit[] = [
 <template>
   <section id="partners" class="container py-12 sm:py-16 ">
 
-    <div class="text-center mb-16">
+    <!-- <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl text-primary text-center font-bold mb-4">
         ĐƠN VỊ TỔ CHỨC & ĐỒNG HÀNH
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-    </div>
+    </div> -->
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
