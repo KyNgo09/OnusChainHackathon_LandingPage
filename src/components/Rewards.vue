@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy, Medal, Gem, Gift } from "lucide-vue-next";
 import logoOnuschain from '@/assets/logo_onus2.png';
 
@@ -49,18 +49,6 @@ const awards = [
 const champion = awards[0]
 const runners = awards.slice(1, 4)
 const special = awards[4]
-
-function splitBenefit(text: string) {
-  if (!text) return { prefix: '', rest: '' }
-  const s = text as string
-  const colon = s.indexOf(':')
-  if (colon > -1) return { prefix: s.slice(0, colon + 1), rest: s.slice(colon + 1).trim() }
-  const dash = s.indexOf('-')
-  if (dash > -1) return { prefix: s.slice(0, dash + 1), rest: s.slice(dash + 1).trim() }
-  const parts = s.split(' ')
-  if (parts.length <= 3) return { prefix: s, rest: '' }
-  return { prefix: parts.slice(0, 3).join(' ') + ' ', rest: parts.slice(3).join(' ') }
-}
 </script>
 
 <template>
@@ -70,6 +58,10 @@ function splitBenefit(text: string) {
         CƠ CẤU GIẢI THƯỞNG
       </h2>
       <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
+      <h3 class="mx-auto text-lg md:text-[24px] text-center text-muted-foreground my-4">
+        <span class="font-bold text-3xl text-black">10.000 USD</span>
+        <span class="block sm:inline text-muted-foreground"> và các phần thưởng giá trị khác</span>
+      </h3>
     </div>
     <div class="max-w-7xl mx-auto">
       <div class="mb-4">
