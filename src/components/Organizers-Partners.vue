@@ -44,9 +44,9 @@ const organizers: Unit[] = [
 // Mảng 3: Đơn vị triển khai
 const implementers: Unit[] = [
   {
-    name: "Raise Your Future",
+    name: "Titops",
     src: logoTitops,
-    href: "https://www.facebook.com/RiseYourFuture.VN", // Cập nhật link
+    href: "https://italent.ai/", // Cập nhật link
   },
   {
     name: "HUB Network",
@@ -89,7 +89,7 @@ const implementers: Unit[] = [
 
       <div class="text-center">
         <h3 class="text-[20px] md:text-[24px] text-center font-semibold text-primary mb-8">
-          Đơn vị triển khai
+          Đơn vị đồng tổ chức
         </h3>
 
         <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6">

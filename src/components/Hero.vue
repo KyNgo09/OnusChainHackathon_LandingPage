@@ -43,7 +43,7 @@ const scrollToGioiThieu = () => {
             </p>
 
             <p>
-              Cơ hội đồng hành & ươm tạo tại
+              Cơ hội đồng hành & ươm tạo cùng
               <strong class="text-primary">Onuschain</strong>.
             </p>
 
