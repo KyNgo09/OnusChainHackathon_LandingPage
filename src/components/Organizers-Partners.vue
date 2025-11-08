@@ -1,11 +1,11 @@
 <script setup lang="ts">
 // Import logo
 import logoDanang from '@/assets/logo_danang.png';
-import logoRise from '@/assets/logo_ryf.png';
+import logoTitops from '@/assets/logo_titops.png';
 import logoHub from '@/assets/logo_hub.png';
 import logoOnuschain from '@/assets/logo_onus2.png';
 import logoFundgo from '@/assets/logo_fundgo.png';
-import logoHva from '@/assets/logo_hva.png'; 
+import logoHva from '@/assets/logo_hva.png';
 
 interface Unit {
   name: string;
@@ -45,7 +45,7 @@ const organizers: Unit[] = [
 const implementers: Unit[] = [
   {
     name: "Raise Your Future",
-    src: logoRise,
+    src: logoTitops,
     href: "https://www.facebook.com/RiseYourFuture.VN", // Cập nhật link
   },
   {
@@ -57,7 +57,7 @@ const implementers: Unit[] = [
 </script>
 
 <template>
-  <section id="partners" class="container py-12 sm:py-16 ">
+  <section id="partners" class="container py-12 sm:py-16 rounded-2xl bg-secondary/10">
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 

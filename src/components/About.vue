@@ -34,7 +34,7 @@ const iconMap: Record<
 </script>
 
 <template>
-  <section id="gioi-thieu" class="container py-24 sm:py-20">
+  <section id="gioi-thieu" class="container py-24 sm:py-20 rounded-2xl bg-secondary/10">
     <div class="text-center mb-16">
       <h2 class="text-[30px] md:text-[40px] text-center font-bold mb-2 text-primary">
         GIỚI THIỆU

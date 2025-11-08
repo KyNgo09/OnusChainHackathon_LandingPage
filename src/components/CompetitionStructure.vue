@@ -68,7 +68,7 @@ const rules = [
 </script>
 
 <template>
-    <section id="co-cau" class="container py-12 sm:py-16 relative">
+    <section id="co-cau" class="container py-12 sm:py-16 relative rounded-2xl bg-secondary/10">
         <h2 class="text-[30px] md:text-[40px] text-center font-bold mb-2 text-primary">
             CƠ CẤU CUỘC THI
         </h2>
@@ -82,7 +82,7 @@ const rules = [
             <div class="px-2">
                 <h2 class="text-[24px] md:text-[28px] font-bold mb-2">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#D247BF] to-primary">{{ obj.title
-                        }}</span>
+                    }}</span>
                 </h2>
                 <p class="text-[16px] text-muted-foreground mt-4">{{ obj.text }}</p>
             </div>
@@ -113,7 +113,7 @@ const rules = [
                                 </div>
                             </CardHeader>
                             <CardContent class="text-muted-foreground px-6 pt-0 pb-6 text-sm md:text-[16px]">{{ b.text
-                                }}</CardContent>
+                            }}</CardContent>
                         </Card>
                     </div>
                 </template>

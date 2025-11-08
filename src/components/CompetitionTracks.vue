@@ -68,7 +68,7 @@ function onLeave() {
 </script>
 
 <template>
-  <section id="bang-thi" class="container py-12 sm:py-16">
+  <section id="bang-thi" class="container py-12 sm:py-16 rounded-2xl bg-secondary/10">
     <div class="text-center mb-4 px-4 md:px-32">
       <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         CÁC BẢNG THI

@@ -52,7 +52,7 @@ const special = awards[4]
 </script>
 
 <template>
-  <section id="giai-thuong" class="container py-24 pb-0">
+  <section id="giai-thuong" class="container py-24 pb-0 rounded-2xl bg-secondary/10">
     <div class="text-center mb-4 px-4 md:px-32">
       <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         CƠ CẤU GIẢI THƯỞNG

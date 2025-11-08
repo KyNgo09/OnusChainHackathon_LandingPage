@@ -9,7 +9,8 @@ const scrollToGioiThieu = () => {
 </script>
 
 <template>
-  <section class="px-4 bg-transparent">
+  <section class="relative px-4 bg-cover bg-center bg-no-repeat min-h-screen"
+    style="background-image: url('/background.jpg')">
     <div class="mx-auto w-full lg:max-w-screen-xl">
       <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 py-16 md:py-24">
         <!-- LEFT COLUMN -->
@@ -78,10 +79,7 @@ const scrollToGioiThieu = () => {
           </div>
         </div>
 
-        <!-- HERO DECORATION -->
-        <div class="lg:col-span-12 flex justify-center mt-12 relative">
-          <hr class="absolute left-1/2 -translate-x-1/2 w-[90%] max-w-5xl border-t-2 border-blue-300/70 rounded-full" />
-        </div>
+
       </div>
     </div>
   </section>

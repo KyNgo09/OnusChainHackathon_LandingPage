@@ -10,12 +10,12 @@ const benefits_responsibilities = [
   {
     title: 'Quyền lợi',
     items: [
-    'Được tiếp cận miễn phí nguồn tài nguyên Công nghệ đa dạng.',
-    'Hỗ trợ phát triển đào tạo chuyên sâu, tư vấn kỹ thuật (đặc biệt cho top 30).',
-    'Mở rộng cơ hội nghề nghiệp, kêu gọi vốn đầu tư.',
-    'Đội thi có quyền thông báo tới Ban Tổ chức về các vấn đề phát sinh.',
-    'Đội thi có quyền khiếu nại về kết quả thi hoặc các vi phạm của đội khác qua email chính thức.'
-  ]
+      'Được tiếp cận miễn phí nguồn tài nguyên Công nghệ đa dạng.',
+      'Hỗ trợ phát triển đào tạo chuyên sâu, tư vấn kỹ thuật (đặc biệt cho top 30).',
+      'Mở rộng cơ hội nghề nghiệp, kêu gọi vốn đầu tư.',
+      'Đội thi có quyền thông báo tới Ban Tổ chức về các vấn đề phát sinh.',
+      'Đội thi có quyền khiếu nại về kết quả thi hoặc các vi phạm của đội khác qua email chính thức.'
+    ]
   },
   {
     title: 'Trách nhiệm',
@@ -40,7 +40,7 @@ const sanctions = [
     ]
   },
   {
-    title: 'Cảnh cáo', 
+    title: 'Cảnh cáo',
     items: [
       'Lỗi tái phạm hoặc mức độ nghiêm trọng vừa, ảnh hưởng đến uy tín cuộc thi.',
       'Công bố trong phạm vi nội bộ cuộc thi.'
@@ -71,7 +71,7 @@ function getVariant(title: string) {
 </script>
 
 <template>
-  <section id="quy-che" class="container py-12 sm:py-16">
+  <section id="quy-che" class="container py-12 sm:py-16 rounded-2xl bg-secondary/10">
     <div class="text-center mb-4 px-4 md:px-32">
       <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
         QUY CHẾ CUỘC THI
