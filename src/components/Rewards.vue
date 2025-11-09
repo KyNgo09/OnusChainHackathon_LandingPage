@@ -156,15 +156,15 @@ const special = awards[4]
             </div>
 
             <div class="max-w-7xl mx-auto px-6 py-6 md:py-8">
-              <div class="flex flex-col md:flex-row items-center md:items-stretch gap-4 md:gap-96 px-2 md:px-12">
-                <div class="flex-1 md:p-6">
+              <div class="flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-12">
+                <div class="flex-1 text-center md:text-left">
                   <div class="text-2xl md:text-3xl font-extrabold uppercase">{{ special.title }}</div>
                   <div class="mt-1 text-sm md:text-base opacity-90">
                     Gói Launchpad OnusChain ĐỘC QUYỀN
                   </div>
-                  <div class="mt-1 text-[24px] font-extrabold md:text-xl">{{ special.prize }}</div>
+                  <div class="mt-4 text-2xl font-extrabold md:text-3xl">{{ special.prize }}</div>
                 </div>
-                <div class="flex-shrink-0 w-36 md:w-48 lg:w-56 md:ml-auto">
+                <div class="flex-shrink-0 w-36 md:w-48 lg:w-56">
                   <img :src="logoOnuschain" alt="Onus logo" class="w-full h-auto object-contain drop-shadow-lg" />
                 </div>
               </div>

@@ -4,224 +4,111 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
 
-import LinkedInIcon from "@/icons/LinkedInIcon.vue";
-import GithubIcon from "@/icons/GithubIcon.vue";
-import XIcon from "@/icons/XIcon.vue";
+import Nhan from "@/assets/Teams/Vuong_Le_Vinh_Nhan.png";
+import Cong from "@/assets/Teams/Nguyen_Chi_Cong.png";
+import Nha from "@/assets/Teams/Le_Hoa_Nha.png";
+import Dung from "@/assets/Teams/Vu_Tien_Dung.webp";
+import Tuong from "@/assets/Teams/Nguyen_Hoai_Tuong.jpeg";
+import Chien from "@/assets/Teams/Tran_Quang_Chien.jpg";
+import Tyler from "@/assets/Teams/Tyler_McElhaney.jpg";
+import Brian from "@/assets/Teams/Brian_Wong.jpeg";
+// import Toan from "@/assets/Teams/nguyen-viet-toan.png";
 
 interface TeamProps {
   imageUrl: string;
-  firstName: string;
-  lastName: string;
-  positions: string[];
-  socialNetworks: SocialNetworkProps[];
-}
-
-interface SocialNetworkProps {
   name: string;
-  url: string;
+  description: string;
 }
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/250?img=58",
-    firstName: "Leo",
-    lastName: "Miranda",
-    positions: ["Vue Fronted Developer", "Creator Of This Website"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
+    imageUrl: Nhan,
+    name: "Ông Vương Lê Vĩnh Nhân",
+    description: "Co-Founder kiêm CEO của VNDC.IO - Tổ chức phát triển stablecoin VNDC.",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Elizabeth",
-    lastName: "Moore",
-    positions: ["UI/UX Designer"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
+    imageUrl: Cong,
+    name: "Ông Nguyễn Chí Công",
+    description: "Cố vấn điều hành quản lý dự án startup blockchain tại Citipass và Delta Labs.",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "David",
-    lastName: "Diaz",
-    positions: ["Machine Learning Engineer", "TensorFlow Tinkerer"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-    ],
+    imageUrl: Nha,
+    name: "Th.s Lê Hòa Nhã",
+    description: "Thạc sĩ Quản trị Tài chính - Đại học Kinh doanh Quốc tế UBIS, Hoa Kỳ. Trưởng ban Truyền thông - Phát triển hội viên - Cộng đồng tại CEO Việt Nam VCCB.",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Sarah",
-    lastName: "Robinson",
-    positions: ["Cloud Native Developer", " Kubernetes Orchestrator"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
+    imageUrl: Dung,
+    name: "Ông Vũ Tiến Dũng",
+    description: "Quản lý phát triển dự án Gcafe tại Công ty Garena Việt Nam (SEA Group).",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1616805765352-beedbad46b2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Michael",
-    lastName: "Holland",
-    positions: ["DevOps Engineer", "CI/CD Pipeline Mastermind"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-    ],
+    imageUrl: Tuong,
+    name: "Ông Nguyễn Hoài Tưởng",
+    description: "Giám đốc Phòng thí nghiệm NEXT Lab tại Viện Quốc tế Pháp ngữ – Đại học Quốc gia Hà Nội (VNU-IFI). Co-Founder Titops.",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Zoe",
-    lastName: "Garcia",
-    positions: ["JavaScript Evangelist", "Deno Champion"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-    ],
+    imageUrl: Chien,
+    name: "Ông Trần Quang Chiến",
+    description: "Giám đốc điều hành ONUS Labs. Co-Founder ONUSChain.",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Evan",
-    lastName: "James",
-    positions: ["Backend Developer"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/leoMirandaa",
-      },
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
+    imageUrl: Tyler,
+    name: "Mr. Tyler McElhaney",
+    description: "Country Head, Apex Vietnam.",
   },
   {
-    imageUrl:
-      "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1573497019236-17f8177b81e8?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    firstName: "Pam",
-    lastName: "Taylor",
-    positions: ["Fullstack developer", "UX Researcher"],
-    socialNetworks: [
-      {
-        name: "X",
-        url: "https://x.com/leo_mirand4",
-      },
-    ],
+    imageUrl: Brian,
+    name: "Mr. Brian Wong",
+    description: "Business Development Executive, Pionex.",
+  },
+  {
+    imageUrl: "", //Toan,
+    name: "Ông Nguyễn Viết Toàn",
+    description: "Giám đốc Trung tâm Hỗ trợ khởi nghiệp và đổi mới sáng tạo Đà Nẵng.",
   },
 ];
 
-const socialIcon = (socialName: string) => {
-  switch (socialName) {
-    case "LinkedIn":
-      return LinkedInIcon;
 
-    case "Github":
-      return GithubIcon;
-
-    case "X":
-      return XIcon;
-  }
-};
 </script>
 
 <template>
-  <section id="team" class="container lg:w-[75%] py-24 sm:py-32">
-    <div class="text-center mb-8">
-      <h2 class="text-lg text-primary text-center mb-2 tracking-wider">Team</h2>
-
-      <h2 class="text-3xl md:text-4xl text-center font-bold">
-        The Company Dream Team
+  <section id="team" class="container lg:w-[75%] py-12 sm:py-20">
+    <div class="mb-4 px-0 md:px-0">
+      <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
+        Hội đồng Giám khảo và Hội đồng Chuyên môn
       </h2>
+      <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
+      <h3 class="mx-auto max-w-4xl text-lg md:text-[20px] text-center text-muted-foreground my-4 leading-relaxed">
+        Hội đồng Giám khảo và Hội đồng Chuyên môn bao gồm các chuyên gia uy tín hàng đầu có kiến thức chuyên sâu và giàu
+        kinh nghiệm thực tế trong các lĩnh vực blockchain, trí tuệ nhân tạo, tài chính số từ các cơ quan quản lý nhà
+        nước, trường đại học uy tín, doanh nghiệp...
+        <br />Danh sách Hội đồng Giám khảo và Hội đồng Chuyên môn sẽ được cập nhật liên tục.
+      </h3>
+
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
       <Card v-for="{
         imageUrl,
-        firstName,
-        lastName,
-        positions,
-        socialNetworks,
+        name,
+        description,
       } in teamList" :key="imageUrl"
-        class="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden group/hoverimg">
+        class="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
         <CardHeader class="p-0 gap-0">
           <div class="h-full overflow-hidden">
-            <img :src="imageUrl" alt=""
-              class="w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]" />
+            <img :src="imageUrl" alt="" class="w-full aspect-square object-cover size-full" />
           </div>
-          <CardTitle class="py-6 pb-4 px-6">{{ firstName }}
-            <span class="text-primary">{{ lastName }}</span>
+          <CardTitle class="py-6 pb-4 px-6">{{ name }}
           </CardTitle>
         </CardHeader>
 
-        <CardContent v-for="(position, index) in positions" :key="index" :class="{
-          'pb-0 text-muted-foreground ': true,
-          'pb-4': index === positions.length - 1,
-        }">
-          {{ position }}<span v-if="index < positions.length - 1">,</span>
+        <CardContent class="pb-4 text-muted-foreground">
+          {{ description }}
         </CardContent>
 
-        <CardFooter class="space-x-4 mt-auto">
-          <a v-for="{ name, url } in socialNetworks" key="name" :href="url" target="_blank"
-            class="hover:opacity-80 transition-all" :aria-label="`Visit our ${name} page`">
-            <component :is="socialIcon(name)" />
-          </a>
-        </CardFooter>
       </Card>
     </div>
   </section>
