@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 
 import Nhan from "@/assets/Teams/Vuong_Le_Vinh_Nhan.png";
@@ -74,42 +79,54 @@ const teamList: TeamProps[] = [
 </script>
 
 <template>
-  <section id="team" class="container lg:w-[75%] py-12 sm:py-20">
-    <div class="mb-4 px-0 md:px-0">
-      <h2 class="text-[28px] md:text-[40px] text-center font-bold mb-2 text-primary">
-        Hội đồng Giám khảo và Hội đồng Chuyên môn
-      </h2>
-      <div class="w-24 h-1 bg-primary/30 mx-auto rounded-full"></div>
-      <h3 class="mx-auto max-w-4xl text-lg md:text-[20px] text-center text-muted-foreground my-4 leading-relaxed">
-        Hội đồng Giám khảo và Hội đồng Chuyên môn bao gồm các chuyên gia uy tín hàng đầu có kiến thức chuyên sâu và giàu
-        kinh nghiệm thực tế trong các lĩnh vực blockchain, trí tuệ nhân tạo, tài chính số từ các cơ quan quản lý nhà
-        nước, trường đại học uy tín, doanh nghiệp...
-        <br />Danh sách Hội đồng Giám khảo và Hội đồng Chuyên môn sẽ được cập nhật liên tục.
-      </h3>
+  <section id="team" class="container py-12 sm:py-20">
+    <div class="mb-16 flex flex-col items-center text-center">
+  
+  <div class="flex flex-col items-center space-y-4 mb-6">
+    <h2 class="text-[28px] md:text-[40px] font-bold text-primary">
+      Hội đồng Giám khảo và Hội đồng Chuyên môn
+    </h2>
+    <div class="w-24 h-1 bg-primary/30 rounded-full"></div>
+  </div>
+  
+  <h3 class="mx-auto max-w-4xl text-lg md:text-[20px] text-muted-foreground leading-relaxed">
+    Hội đồng Giám khảo và Chuyên môn gồm các chuyên gia hàng đầu trong lĩnh vực blockchain, AI, tài chính số đến từ cơ quan quản lý, trường đại học và doanh nghiệp uy tín.
+    <br />Danh sách Hội đồng Giám khảo và Hội đồng Chuyên môn sẽ được cập nhật liên tục.
+  </h3>
 
-    </div>
+</div>
 
 
-    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-      <Card v-for="{
-        imageUrl,
-        name,
-        description,
-      } in teamList" :key="imageUrl"
-        class="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <CardHeader class="p-0 gap-0">
-          <div class="h-full overflow-hidden">
-            <img :src="imageUrl" alt="" class="w-full aspect-square object-cover size-full" />
-          </div>
-          <CardTitle class="py-6 pb-4 px-6">{{ name }}
-          </CardTitle>
-        </CardHeader>
-
-        <CardContent class="pb-4 text-muted-foreground">
-          {{ description }}
-        </CardContent>
-
-      </Card>
+    <div class="w-full px-12">
+      <Carousel :opts="{
+        align: 'start',
+        loop: true,
+      }" class="relative w-full">
+        <CarouselContent>
+          <CarouselItem v-for="{ imageUrl, name, description } in teamList" :key="name"
+            class="basis-4/5 md:basis-1/2 lg:basis-1/4 xl:basis-1/5">
+            <div class="p-1">
+              <Card class="overflow-hidden rounded-lg shadow-md">
+                <CardContent class="p-0 relative flex aspect-[4/5] items-center justify-center">
+                  <img :src="imageUrl" :alt="name"
+                    class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+                  <div
+                    class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-2 sm:p-4 flex flex-col justify-end">
+                    <h3 class="text-sm sm:text-lg font-bold text-white leading-tight">
+                      {{ name }}
+                    </h3>
+                    <p class="text-[11px] sm:text-xs text-white/80 mt-1 leading-snug">
+                      {{ description }}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious class="absolute left-[-20px]" />
+        <CarouselNext class="absolute right-[-20px]" />
+      </Carousel>
     </div>
   </section>
 </template>
