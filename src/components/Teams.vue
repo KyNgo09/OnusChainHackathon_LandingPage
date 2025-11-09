@@ -81,20 +81,20 @@ const teamList: TeamProps[] = [
 <template>
   <section id="team" class="container py-12 sm:py-20">
     <div class="mb-16 flex flex-col items-center text-center">
-  
-  <div class="flex flex-col items-center space-y-4 mb-6">
-    <h2 class="text-[28px] md:text-[40px] font-bold text-primary">
-      Hội đồng Giám khảo và Hội đồng Chuyên môn
-    </h2>
-    <div class="w-24 h-1 bg-primary/30 rounded-full"></div>
-  </div>
-  
-  <h3 class="mx-auto max-w-4xl text-lg md:text-[20px] text-muted-foreground leading-relaxed">
-    Hội đồng Giám khảo và Chuyên môn gồm các chuyên gia hàng đầu trong lĩnh vực blockchain, AI, tài chính số đến từ cơ quan quản lý, trường đại học và doanh nghiệp uy tín.
-    <br />Danh sách Hội đồng Giám khảo và Hội đồng Chuyên môn sẽ được cập nhật liên tục.
-  </h3>
 
-</div>
+      <div class="flex flex-col items-center space-y-4 mb-6">
+        <h2 class="text-[28px] md:text-[40px] font-bold text-primary">
+          Hội đồng Giám khảo và Hội đồng Chuyên môn
+        </h2>
+        <div class="w-24 h-1 bg-primary/30 rounded-full"></div>
+      </div>
+
+      <h3 class="mx-auto max-w-4xl text-lg md:text-[20px] text-muted-foreground leading-relaxed">
+        Hội đồng Giám khảo và Chuyên môn gồm các chuyên gia hàng đầu trong lĩnh vực blockchain, AI, tài chính số đến từ
+        cơ quan quản lý, trường đại học và doanh nghiệp uy tín.
+      </h3>
+
+    </div>
 
 
     <div class="w-full px-12">
@@ -127,6 +127,12 @@ const teamList: TeamProps[] = [
         <CarouselPrevious class="absolute left-[-20px]" />
         <CarouselNext class="absolute right-[-20px]" />
       </Carousel>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center text-center">
+      <h3 class="mx-auto max-w-4xl text-lg md:text-[20px] text-muted-foreground leading-relaxed italic">
+        Danh sách Hội đồng Giám khảo và Hội đồng Chuyên môn sẽ được cập nhật liên tục.
+      </h3>
     </div>
   </section>
 </template>
