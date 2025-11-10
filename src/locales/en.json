@@ -1,0 +1,325 @@
+{
+  "nav": {
+    "introduction": "About",
+    "competition": "Competition",
+    "structure": "Structure",
+    "track": "Track",
+    "rule": "Rule",
+    "prize": "Prize",
+    "schedule": "Schedule",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "mini-title": "Challenge",
+    "title": "BlockAiThon",
+    "description": "Total Prize Pool Up To",
+    "description2": "Chance to Partner & Get Incubated with Onuschain.",
+    "prize": "10.000 USD",
+    "register-button": "Register Now",
+    "more-info-button": "More Info"
+  },
+
+  "about": {
+    "title": "INTRODUCTION",
+    "title-description":"OBJECTIVES",
+    "objective":"BlockAiThon is a creative competition focused on Blockchain, AI, and Digital Assets. Its goal is to identify and nurture potential projects with the support of Onus, while also recruiting talented individuals. This is an innovation playground for developers, students, startups, and businesses to bring breakthrough technology ideas to life.",
+    "title-description2":"OPPORTUNITIES",
+    "opportunities": "BlockAiThon offers a golden opportunity for teams to turn breakthrough technology ideas into reality, receive incubation from Onus, and access resources and mentorship to bring their products to the real market, while also building the “Make in Vietnam” brand."
+  },
+
+  "partner": {
+    "support-organizer": "Supporting Organization",
+    "organizer": "Organizers",
+    "co-organizer": "Accompanying Organization"
+  },
+
+  "competition-structure": {
+    "title": "COMPETITION STRUCTURE",
+    "description": "The journey from the Application Round to the Finals, with a clear set of scoring criteria to help teams define their strategy.",
+    "subtitle": "Eligible Participants",
+    "sub-description": "Teams of two (02) to five (05) members, meeting at least one of the following conditions:",
+    "card-title": {
+      "object1": "Students",
+      "object2": "Startups",
+      "object3": "Young Researchers",
+      "object4": "Businesses"
+    },
+
+    "card-description": {
+      "object1": "From any field of study, with basic knowledge of blockchain or AI, and a spirit of learning and creativity.",
+      "object2": "Teams with a startup idea looking to implement solutions in blockchain, AI, digital assets, or digital technology.",
+      "object3": "Young professionals passionate about researching AI, blockchain, digital assets, or digital technology.",
+      "object4": "Companies currently operating in blockchain, AI, digital technology, digital assets, etc."
+    },
+    
+    "apply-round": {
+      "title": "Application Round",
+      "description": {
+        "point1": "<strong>Format:</strong> Submit application + online project pitching.",
+        "point2": "<strong>Selection:</strong> Top 50 projects from each category will be chosen, followed by pitching to select the Top 30 for the Semifinals."
+      }
+    },
+
+    "semifinal-round": {
+      "title": "Semifinal Round",
+      "description": {
+        "point1": "<strong>Format:</strong> Online project pitching.",
+        "point2": "<strong>Selection:</strong> After training, teams pitch to select the Top 15 from each category to advance to the Finals."
+      }
+    },
+
+    "final-round": {
+      "title": "Final Round",
+      "description": {
+        "point1": "<strong>Format:</strong> Online pitching (bracket round) + offline competition in Da Nang (Finals).",
+        "point2": "<strong>Selection:</strong> After intensive training, the Top 10 teams from each category will pitch directly to determine the winners.",
+        "point3": "The best team from each category will also participate in experiential activities.",
+        "point4": "The Organizing Committee announces the winners, awards prizes, closes the event, and takes commemorative photos."
+      }
+    },
+
+    "criteria": {
+        "title": "Scoring Criteria",
+        "description": {
+            "point1": "Originality and creativity of the idea",
+            "point2": "Feasibility and initial practicality",
+            "point3": "Real-world value",
+            "point4": "Sustainability and scalability",
+            "point5": "Additional criteria: project completeness, brand recognition, presentation skills, explanation, and rebuttal"
+            }
+        }
+    },
+
+    "competition-tracks": {
+    "title": "COMPETITION CATEGORIES",
+    "description": "From Blockchain to AI, and the potential synergy of both – this is where bold ideas are nurtured, turning technology into a driving force for the digital world.",
+    "track1": {
+      "title": "BLOCKCHAIN HACKATHON",
+      "description": "Focus on blockchain technology, tokenomics, smart contracts, DeFi, NFT, SocialFi, GameFi, etc."
+        },
+
+    "track2": {
+      "title": "AI HACKATHON",
+      "description": "For ideas leveraging artificial intelligence to solve real-world problems in finance, digital economy, or digital assets. Focus on AI/ML applications, NLP, GenAI, and AI ethics."
+        },
+
+    "track3": {
+      "title": "BLOCKCHAIN & AI HACKATHON",
+      "description": "A special category for pioneering teams combining Blockchain and AI to create solutions for data verification, automated transactions, security, and AI transparency."
+        }
+    },
+
+    "competition-rules": {
+    "title": "COMPETITION REGULATIONS",
+    "description": "These rules apply to all participating teams. Please read carefully and comply.",
+    "benefit-responsibility": {
+      "title": "TEAM RIGHTS & RESPONSIBILITIES",
+      "benefit": {
+        "title": "Benefits",
+        "point1": "Access to training, mentorship, and technical support from experts.",
+        "point2": "Support for in-depth training and technical consulting (especially for the top 30).",
+        "point3": "Expanded career opportunities and investment solicitation.",
+        "point4": "Teams have the right to notify the Organizing Committee of any arising issues.",
+        "point5": "Teams have the right to appeal the competition results or any violations by other teams via official email."
+        },
+      "responsibility": {
+        "title": "Responsibilities",
+        "point1": "At least 50% of team members must participate in activities and events organized by the Organizing Committee.",
+        "point2": "Comply with the rules and deadlines set by the Organizing Committee.",
+        "point3": "Take responsibility for intellectual property rights and keep competition documents confidential.",
+        "point4": "Ensure all provided information is truthful and take responsibility if found to be false.",
+        "point5": "No cheating, ethical or legal violations, or insults to the competition and other teams.",
+        "point6": "Teams may not change their member structure once the competition has started.",
+        "point7": "All meetings (Mentoring, Investors...) related to the project must be scheduled and reported to the Organizing Committee at least 24 hours in advance."
+        }
+      },
+    "disciplinary-measures": {
+        "title": "DISCIPLINARY MEASURES",
+        "warning": {
+            "title": "Warning",
+            "point1": "Minor first-time offense, not serious.",
+            "point2": "Immediate correction required via official notice."
+            },
+
+        "reprimand": {
+            "title": "Reprimand",
+            "point1": "Repeated or moderately serious offense affecting the competition’s reputation.",
+            "point2": "Announced internally."
+            },
+
+        "point-deduction": {
+            "title": "Point Deduction",
+            "point1": "Violation of procedures (late submission, data falsification, incorrect application format, etc.).",
+            "point2": "Deduction decided by the Organizing Committee."
+            },
+
+        "disqualification": {
+            "title": "Disqualification",
+            "point1": "Serious violations: plagiarism, cheating, copyright infringement, ethical or legal violations.",
+            "point2": "The Organizing Committee reserves the right to publicly announce disqualification."
+            }
+        }
+    },
+
+    "reward": {
+        "title": "PRIZE STRUCTURE",
+        "description": "and other valuable prizes.",
+        "champion": {
+            "title": "Champion",
+            "subtitle": "The highest prize package of the competition",
+            "prize": "100,000,000 VND",
+            "description": "in cash and in-kind rewards for the winning team"
+            },
+        "runner-up": {
+            "title": "Runner-up",
+            "prize": "50,000,000 VND"
+            },
+        "third-place": {
+            "title": "Third Place",
+            "prize": "15,000,000 VND"
+            },
+        "consolation": {
+            "title": "Three Consolation Prizes",
+            "prize": "Total value: 16,000,000 VND"
+            },
+        "special": {
+            "title": "Special Prize",
+            "description": "EXCLUSIVE OnusChain Launchpad Package",
+            "prize": "Total value up to 150,000,000 VND"
+        }
+    },
+
+    "schedules": {
+        "title": "COMPETITION ORGANIZATION SCHEDULE",
+        "description": "This schedule outlines the important milestones of the Application Round, leading up to the Semi-finals and Finals!",
+        "apply-round": {
+            "title": "Application Round",
+            "kickoff-card": {
+                "date": "07/11/2025 (November 07, 2025)",
+                "description": "The official Kickoff to launch the competition."
+            },
+            "registration-card": {
+                "date": "07/11 - 12/11/2025 (November 07 - 12, 2025)",
+                "description": "Registration opens for all competition categories."
+            },
+            "participation-card": {
+                "date": "07/11 - 15/12/2025 (November 07 - December 15, 2025)",
+                "description": "Participants submit their Application Profiles/Projects."
+            },
+            "announcement-card": {
+                "date": "03/01/2026 (January 3, 2026)",
+                "description": "Announcement of the Top 50 results for each category."
+            },
+            "pitching-card": {
+                "date": "04/01 - 08/01/2026 (January 4 - 8, 2026)",
+                "description": "Pitching (presentations) by the Top 50 followed by the official Announcement of the Top 30."
+            }
+        },
+        "semifinal-round": {
+            "title": " Semi-final Round",
+            "meeting-card": {
+                "date": "07/01/2026 (January 7, 2026)",
+                "description": "Meeting with the Top 30 of each category"
+            },
+            "course-card": {
+                "date": "07/01 - 16/01/2026 (January 7 - 16, 2026)",
+                "description": "Series of online training courses"
+            },
+            "pitching-card": {
+                "date": "17/01 - 19/01/2026 (January 17 - 19, 2026)",
+                "description": "Pitching Top 30 & selecting the Top 15"
+            },
+            "mentoring-card": {
+                "date": "20/01 - 06/02/2026 (January 20 - February 6, 2026)",
+                "description": "Mentoring for the competing teams"
+            }
+        },
+        "final-round": {
+            "title": "Final Round",
+            "pitching-card": {
+                "date": "06/02 - 07/02/2026 (February 6 - 7, 2026)",
+                "description": "Pitching Top 15 & Selecting the Top 10"
+            },
+            "final-card": {
+                "date": "10/02/2026 (February 10, 2026)",
+                "description": "Finals in Da Nang City (offline + livestream)"
+            }
+        },
+        "key-milestones": {
+            "title": "Key Milestones",
+            "start-card": {
+                "title": "Registration Starts",
+                "date": "07/11/2025"
+            },
+            "expired-registrations-card": {
+                "title": "Application Deadline",
+                "date": "15/12/2025"
+            },
+            "final-date": {
+                "title": "Finals",
+                "date": "10/02/2026"
+            }
+        }
+    },
+
+"team": {
+        "title": "Judging Panel and Expert Advisory Board",
+        "description": "The Judging Panel and Expert Advisory Board comprise leading experts in blockchain, AI, and digital finance from regulatory bodies, prestigious universities, and reputable enterprises.",
+        "Nguyen-Chi-Cong": {
+            "name": "Mr. Nguyễn Chí Công",
+            "role": "Executive Advisor for blockchain startup project management at Citipass and Delta Labs."
+        },
+        "Le-Hoa-Nha": {
+            "name":"Mr. Lê Hòa Nhã",
+            "role":"Master of Financial Management - UBIS International University of Business, USA. Head of Communications and Membership Development - Vietnam CEO Community (VCCB)."
+        },
+        "Vu-Tien-Dung": {
+            "name":"Mr. Vũ Tiến Dũng",
+            "role":"Project Development Manager for Gcafe at Garena Vietnam (SEA Group)."
+        },
+        "Tyler-McElhaney": {
+            "name":"Mr. Tyler McElhaney",
+            "role":"Country Head, Apex Vietnam."
+        },
+        "Brian-Wong": {
+            "name":"Mr. Brian Wong",
+            "role":"Business Development Executive, Pionex."
+        },
+        "Nguyen-Hoai-Tuong": {
+            "name":"Mr. Nguyễn Hoài Tưởng",
+            "role":"Director of NEXT Lab at the International Francophone Institute – Vietnam National University, Hanoi (VNU-IFI). Co-Founder of Titops."
+        },
+        "Tran-Quang-Chien": {
+            "name":"Mr. Trần Quang Chiến",
+            "role":"CEO of ONUS Labs. Co-Founder of ONUSChain."
+        },
+        "Nguyen-Viet-Toan": {
+            "name":"Mr. Nguyễn Việt Toàn",
+            "role":"Director of Da Nang Center for Startup and Innovation Support."
+        },
+        "Vuong-Le-Vinh-Nhan": {
+            "name":"Mr. Vương Lê Vinh Nhân",
+            "role":"Co-Founder and CEO of VNDC.IO – Organization developing the VNDC stablecoin."
+        },
+        "note": "The list of the Judging Panel and Expert Advisory Board will be updated continuously."
+    },
+
+    "footer": {
+        "description": "BlockAiThon Blockchain & AI Hackathon Competition - From Idea to Impact.",
+        "quick-link": {
+            "title": "Quick Links",
+            "about": "Introduction",
+            "structure": "Competition Structure",
+            "prize": "Prizes",
+            "schedule": "Schedule"
+        },
+        "contact": {
+            "title": "Contact",
+            "email": "Blockaithon@gmail.com",
+            "phone": "0911.871.573 (Ms. Van)",
+            "facebook": "Cuộc Thi BLOCKAITHON",
+            "website": "www.blockaithon.com"
+        }
+    }
+}
