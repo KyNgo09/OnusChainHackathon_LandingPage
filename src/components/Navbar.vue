@@ -85,7 +85,29 @@ const isOpen = ref<boolean>(false);
     </a>
 
     <!-- Mobile -->
-    <div class="flex items-center lg:hidden">
+    <div class="flex items-center justify-end flex-1 lg:hidden gap-2">
+      <Button
+        size="sm"
+        variant="outline"
+        @click="toggleLang"
+        class="flex items-center gap-1"
+      >
+        <span class="inline-block w-5 h-5 align-middle">
+          <img
+            v-if="currentLang === 'vi'"
+            src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg"
+            alt="VN"
+            class="w-full h-full object-cover rounded-sm"
+          />
+          <img
+            v-else
+            src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg"
+            alt="EN"
+            class="w-full h-full object-cover rounded-sm"
+          />
+        </span>
+        <span>{{ currentLang === "vi" ? "VN" : "EN" }}</span>
+      </Button>
       <Sheet v-model:open="isOpen">
         <SheetTrigger as-child>
           <Menu @click="isOpen = true" class="cursor-pointer" />
@@ -139,8 +161,32 @@ const isOpen = ref<boolean>(false);
             </div>
           </div>
 
-          <SheetFooter class="flex-col sm:flex-col justify-start items-start">
+          <SheetFooter
+            class="flex-col sm:flex-col justify-start items-start gap-2"
+          >
             <Separator class="mb-2" />
+            <Button
+              size="sm"
+              variant="outline"
+              @click="toggleLang"
+              class="flex items-center gap-1"
+            >
+              <span class="inline-block w-5 h-5 align-middle">
+                <img
+                  v-if="currentLang === 'vi'"
+                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg"
+                  alt="VN"
+                  class="w-full h-full object-cover rounded-sm"
+                />
+                <img
+                  v-else
+                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg"
+                  alt="EN"
+                  class="w-full h-full object-cover rounded-sm"
+                />
+              </span>
+              <span>{{ currentLang === "vi" ? "VN" : "EN" }}</span>
+            </Button>
             <!-- Nếu dùng theme toggle, mở lại component -->
             <!-- <ToggleTheme /> -->
           </SheetFooter>
