@@ -58,7 +58,7 @@ const quickLinks = computed(() => [
             class="opacity-60 hover:opacity-100 items-center flex gap-2"
           >
             <Mail class="size-4 text-primary" />
-            <span>{{ t("footer.contact.email") }}</span>
+            <span>Blockaithon@gmail.com</span>
           </a>
 
           <a
