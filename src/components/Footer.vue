@@ -7,6 +7,8 @@ import { computed } from "vue";
 // Import icons
 import { Mail, Phone, Globe, Facebook } from "lucide-vue-next";
 
+const { t } = useI18n();
+
 // THÊM MỚI: Dữ liệu cho các liên kết nhanh
 const quickLinks = computed(() => [
   { href: "#gioi-thieu", label: t("footer.quick-link.about") }, // ID của section Giới thiệu
@@ -14,8 +16,6 @@ const quickLinks = computed(() => [
   { href: "#giai-thuong", label: t("footer.quick-link.prize") }, // ID của section Giải thưởng
   { href: "#lich-trinh", label: t("footer.quick-link.schedule") }, // ID của section Lịch trình
 ]);
-
-const { t } = useI18n();
 </script>
 
 <template>
