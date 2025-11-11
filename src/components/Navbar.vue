@@ -72,39 +72,22 @@ const isOpen = ref<boolean>(false);
 
 <template>
   <header
-    class="w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md"
-  >
-    <a href="/" class="font-bold text-lg flex items-center">
-      <ChevronsDown
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
-      />
-      <span
-        class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
-        >BlockAiThon</span
-      >
+    class="w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md">
+    <a href="#" class="flex font-bold items-center">
+      <img src="/favicon.png" alt="BlockAiThon Logo" class="w-9 h-9" />
+      <h3 class="text-2xl text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
+        BlockAiThon
+      </h3>
     </a>
 
     <!-- Mobile -->
     <div class="flex items-center justify-end flex-1 lg:hidden gap-2">
-      <Button
-        size="sm"
-        variant="outline"
-        @click="toggleLang"
-        class="flex items-center gap-1"
-      >
+      <Button size="sm" variant="outline" @click="toggleLang" class="flex items-center gap-1">
         <span class="inline-block w-5 h-5 align-middle">
-          <img
-            v-if="currentLang === 'vi'"
-            src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg"
-            alt="VN"
-            class="w-full h-full object-cover rounded-sm"
-          />
-          <img
-            v-else
-            src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg"
-            alt="EN"
-            class="w-full h-full object-cover rounded-sm"
-          />
+          <img v-if="currentLang === 'vi'" src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg" alt="VN"
+            class="w-full h-full object-cover rounded-sm" />
+          <img v-else src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg" alt="EN"
+            class="w-full h-full object-cover rounded-sm" />
         </span>
         <span>{{ currentLang === "vi" ? "VN" : "EN" }}</span>
       </Button>
@@ -113,17 +96,13 @@ const isOpen = ref<boolean>(false);
           <Menu @click="isOpen = true" class="cursor-pointer" />
         </SheetTrigger>
 
-        <SheetContent
-          side="left"
-          class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card"
-        >
+        <SheetContent side="left" class="flex flex-col justify-between rounded-tr-2xl rounded-br-2xl bg-card">
           <div>
             <SheetHeader class="mb-4 ml-4">
               <SheetTitle class="flex items-center">
                 <a href="/" class="flex items-center">
                   <ChevronsDown
-                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white"
-                  />
+                    class="bg-gradient-to-tr from-primary/70 via-primary to-primary/70 rounded-lg size-9 mr-2 border text-white" />
                   BlockAiThon
                 </a>
               </SheetTitle>
@@ -131,27 +110,15 @@ const isOpen = ref<boolean>(false);
 
             <div class="flex flex-col gap-2">
               <template v-for="route in routeList" :key="route.i18nKey">
-                <Button
-                  as-child
-                  variant="ghost"
-                  class="justify-start text-base"
-                >
-                  <a
-                    @click="!route.subItems ? (isOpen = false) : null"
-                    :href="route.href"
-                  >
+                <Button as-child variant="ghost" class="justify-start text-base">
+                  <a @click="!route.subItems ? (isOpen = false) : null" :href="route.href">
                     {{ t(`nav.${route.i18nKey}`) }}
                   </a>
                 </Button>
 
                 <div v-if="route.subItems" class="flex flex-col pl-6">
-                  <Button
-                    v-for="subItem in route.subItems"
-                    :key="subItem.i18nKey"
-                    as-child
-                    variant="ghost"
-                    class="justify-start text-base text-muted-foreground"
-                  >
+                  <Button v-for="subItem in route.subItems" :key="subItem.i18nKey" as-child variant="ghost"
+                    class="justify-start text-base text-muted-foreground">
                     <a @click="isOpen = false" :href="subItem.href">
                       {{ t(`nav.${subItem.i18nKey}`) }}
                     </a>
@@ -161,29 +128,14 @@ const isOpen = ref<boolean>(false);
             </div>
           </div>
 
-          <SheetFooter
-            class="flex-col sm:flex-col justify-start items-start gap-2"
-          >
+          <SheetFooter class="flex-col sm:flex-col justify-start items-start gap-2">
             <Separator class="mb-2" />
-            <Button
-              size="sm"
-              variant="outline"
-              @click="toggleLang"
-              class="flex items-center gap-1"
-            >
+            <Button size="sm" variant="outline" @click="toggleLang" class="flex items-center gap-1">
               <span class="inline-block w-5 h-5 align-middle">
-                <img
-                  v-if="currentLang === 'vi'"
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg"
-                  alt="VN"
-                  class="w-full h-full object-cover rounded-sm"
-                />
-                <img
-                  v-else
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg"
-                  alt="EN"
-                  class="w-full h-full object-cover rounded-sm"
-                />
+                <img v-if="currentLang === 'vi'" src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg"
+                  alt="VN" class="w-full h-full object-cover rounded-sm" />
+                <img v-else src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg" alt="EN"
+                  class="w-full h-full object-cover rounded-sm" />
               </span>
               <span>{{ currentLang === "vi" ? "VN" : "EN" }}</span>
             </Button>
@@ -216,10 +168,8 @@ const isOpen = ref<boolean>(false);
               <ul class="grid w-[200px] gap-3 p-4">
                 <li v-for="subItem in route.subItems" :key="subItem.i18nKey">
                   <NavigationMenuLink asChild>
-                    <a
-                      :href="subItem.href"
-                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
+                    <a :href="subItem.href"
+                      class="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                       {{ t(`nav.${subItem.i18nKey}`) }}
                     </a>
                   </NavigationMenuLink>
@@ -233,25 +183,12 @@ const isOpen = ref<boolean>(false);
 
     <!-- Actions (desktop) -->
     <div class="hidden lg:flex items-center gap-2">
-      <Button
-        size="sm"
-        variant="outline"
-        @click="toggleLang"
-        class="flex items-center gap-1"
-      >
+      <Button size="sm" variant="outline" @click="toggleLang" class="flex items-center gap-1">
         <span class="inline-block w-5 h-5 align-middle">
-          <img
-            v-if="currentLang === 'vi'"
-            src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg"
-            alt="VN"
-            class="w-full h-full object-cover rounded-sm"
-          />
-          <img
-            v-else
-            src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg"
-            alt="EN"
-            class="w-full h-full object-cover rounded-sm"
-          />
+          <img v-if="currentLang === 'vi'" src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/vn.svg" alt="VN"
+            class="w-full h-full object-cover rounded-sm" />
+          <img v-else src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/gb.svg" alt="EN"
+            class="w-full h-full object-cover rounded-sm" />
         </span>
         <span>{{ currentLang === "vi" ? "VN" : "EN" }}</span>
       </Button>
