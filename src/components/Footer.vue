@@ -59,8 +59,7 @@ const quickLinks = computed(() => [
             <span>{{ t("footer.contact.facebook") }}</span>
           </a>
 
-          <a href="https.www.blockaithon.com" target="_blank"
-            class="opacity-60 hover:opacity-100 items-center flex gap-2">
+          <a href="/" target="_blank" class="opacity-60 hover:opacity-100 items-center flex gap-2">
             <Globe class="size-4 text-primary" />
             <span>{{ t("footer.contact.website") }}</span>
           </a>
