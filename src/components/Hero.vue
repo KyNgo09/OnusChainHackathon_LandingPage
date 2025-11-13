@@ -63,14 +63,18 @@ const scrollToGioiThieu = () => {
             <!-- CTA Buttons -->
             <div class="flex flex-wrap justify-center gap-4">
               <!-- Đăng ký ngay -->
-              <Button
+                <Button
+                as="a"
+                href="https://forms.gle/i9wKer4RfMoodTEQ7"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-sm md:text-[16px] w-40 font-bold group/arrow bg-blue-600/80 hover:bg-blue-700/90 text-white backdrop-blur-sm shadow-md hover:shadow-blue-500/30 transition-all duration-300"
-              >
+                >
                 {{ t("hero['register-button']") }}
                 <ArrowRight
                   class="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform"
                 />
-              </Button>
+                </Button>
 
               <!-- Tìm hiểu thêm -->
               <Button
