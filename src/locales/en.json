@@ -57,7 +57,7 @@
       "title": "Application Round",
       "description": {
         "point1": "<strong>Format:</strong> Submit application + online project pitching.",
-        "point2": "<strong>Selection:</strong> Top 50 projects from each category will be chosen, followed by pitching to select the Top 30 for the Semifinals."
+        "point2": "<strong>Selection:</strong> The top 50 projects from the 3 competition groups, then hold a pitching round to choose the top 30 for the Semifinals."
       }
     },
 
@@ -65,7 +65,7 @@
       "title": "Semifinal Round",
       "description": {
         "point1": "<strong>Format:</strong> Online project pitching.",
-        "point2": "<strong>Selection:</strong> After training, teams pitch to select the Top 15 from each category to advance to the Finals."
+        "point2": "<strong>Selection:</strong> After training, teams pitch to select the Top 15 to advance to the Finals."
       }
     },
 
@@ -73,7 +73,7 @@
       "title": "Final Round",
       "description": {
         "point1": "<strong>Format:</strong> Online pitching (bracket round) + offline competition in Da Nang (Finals).",
-        "point2": "<strong>Selection:</strong> After intensive training, the Top 10 teams from each category will pitch directly to determine the winners.",
+        "point2": "<strong>Selection:</strong> After intensive training, select the top 6 outstanding teams from the 3 competition groups to advance to the Final Round, with live pitching to determine the winners.",
         "point3": "The best team from each category will also participate in experiential activities.",
         "point4": "The Organizing Committee announces the winners, awards prizes, closes the event, and takes commemorative photos."
       }

@@ -17,7 +17,7 @@ import Dung from "@/assets/Teams/Vu_Tien_Dung.webp";
 import Tuong from "@/assets/Teams/Nguyen_Hoai_Tuong.jpeg";
 import Chien from "@/assets/Teams/Tran_Quang_Chien.png";
 // import Tyler from "@/assets/Teams/Tyler_McElhaney.png";
-import Brian from "@/assets/Teams/Brian_Wong.jpeg";
+// import Brian from "@/assets/Teams/Brian_Wong.jpeg";
 import Toan from "@/assets/Teams/Nguyen_Viet_Toan.png";
 
 interface TeamProps {
@@ -64,11 +64,11 @@ const teamList = computed<TeamProps[]>(() => [
   //   name: t("team.Tyler-McElhaney.name"),
   //   description: t("team.Tyler-McElhaney.role"),
   // },
-  {
-    imageUrl: Brian,
-    name: t("team.Brian-Wong.name"),
-    description: t("team.Brian-Wong.role"),
-  },
+  // {
+  //   imageUrl: Brian,
+  //   name: t("team.Brian-Wong.name"),
+  //   description: t("team.Brian-Wong.role"),
+  // },
   {
     imageUrl: Toan,
     name: t("team.Nguyen-Viet-Toan.name"),

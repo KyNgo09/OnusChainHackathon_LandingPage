@@ -57,7 +57,7 @@
       "title": "Vòng Hồ Sơ",
       "description": {
         "point1": "<strong>Hình thức:</strong> Nộp hồ sơ + pitching dự án online",
-        "point2": "Chọn top 50 dự án mỗi bảng thi, sau đó Pitching để chọn top 30 mỗi bảng thi vào Bán kết."
+        "point2": "Chọn top 50 dự án từ 3 bảng thi, sau đó Pitching để chọn top 30 vào Bán kết."
       }
     },
 
@@ -65,7 +65,7 @@
       "title": "Vòng Bán Kết",
       "description": {
         "point1": "<strong>Hình thức:</strong> Pitching dự án online",
-        "point2": "Sau khi tham gia đào tạo, các đội thi pitching để chọn top 15 mỗi bảng thi vào Chung kết."
+        "point2": "Sau khi tham gia đào tạo, các đội thi pitching để chọn top 15 vào Chung kết."
       }
     },
 
@@ -73,7 +73,7 @@
       "title": "Vòng Chung Kết",
       "description": {
         "point1": "<strong>Hình thức:</strong> Pitching online (Bảng nhánh) + thi offline tại Đà Nẵng (Chung kết)",
-        "point2": "Sau đào tạo chuyên sâu, chọn top 10 mỗi bảng thi xuất sắc nhất tiến vào vòng Chung kết, pitching trực tiếp để tìm ra đội chiến thắng.",
+        "point2": "Sau đào tạo chuyên sâu, chọn top 6 xuất sắc nhất từ 3 bảng thi tiến vào vòng Chung kết, pitching trực tiếp để tìm ra đội chiến thắng.",
         "point3": "Đội xuất sắc nhất của mỗi bảng sẽ được chọn để tham gia hoạt động trải nghiệm.",
         "point4": "Ban Tổ chức công bố và trao giải thưởng, bế mạc và chụp hình lưu niệm."
       }
